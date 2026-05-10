@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- 新增：讓手機瀏覽器頂部狀態列與網頁底色融合，提升高級感 -->
   <meta name="theme-color" content="#FAF7F2">
-  <title>漫恩美學 | 預約與服務指南</title>
+  <title>漫恩美學 MANN STUDIO｜台北美睫·睫毛管理·質感定妝</title>
   <style>
     /* --- 全局設定 --- */
     * {
@@ -17,8 +17,8 @@
       margin: 0;
       padding: 0;
       font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang TC', '微軟正黑體', sans-serif;
-      background-color: #FAF7F2; 
-      color: #332B25; 
+      background-color: #FAF7F2;
+      color: #332B25;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -31,7 +31,7 @@
       width: 100%;
       max-width: 480px;
       margin: 0 auto;
-      background: #FFFFFF; 
+      background: #FFFFFF;
       min-height: 100vh;
       box-shadow: 0 8px 32px rgba(74, 63, 53, 0.06);
       display: flex;
@@ -41,7 +41,7 @@
     /* --- 上方 Header 區塊 --- */
     .header {
       text-align: center;
-      padding: 24px 20px 16px; 
+      padding: 24px 20px 16px;
       background: #FFFFFF;
       display: flex;
       flex-direction: column;
@@ -49,22 +49,22 @@
     }
 
     .header h1 {
-      margin: 0 0 6px 0; 
+      margin: 0 0 6px 0;
       font-size: 24px;
-      font-weight: 600; 
-      color: #2C241E; 
-      letter-spacing: 4px; 
-      text-indent: 4px; 
+      font-weight: 600;
+      color: #2C241E;
+      letter-spacing: 4px;
+      text-indent: 4px;
       word-wrap: break-word;
     }
 
     .header p {
       margin: 0;
-      font-size: 13px; 
-      color: #6D5E52; 
+      font-size: 13px;
+      color: #6D5E52;
       font-weight: 500;
       letter-spacing: 2px;
-      text-indent: 2px; 
+      text-indent: 2px;
     }
 
     /* --- 分頁導覽列 --- */
@@ -75,59 +75,52 @@
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       display: flex;
-      gap: 8px;
+      gap: 6px;
       padding: 12px 16px;
       z-index: 100;
       box-shadow: 0 4px 16px rgba(74, 63, 53, 0.05);
-      overflow-x: auto; 
-      scrollbar-width: none; 
-      scroll-behavior: smooth;
-    }
-
-    .tabs::-webkit-scrollbar {
-      display: none; 
     }
 
     .tab {
-      flex: 0 0 auto; 
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 18px; 
+      padding: 10px 0;
       text-align: center;
       text-decoration: none;
       background: #F5F1EB;
-      border-radius: 99px; 
-      font-size: 14px; 
-      font-weight: 500; 
-      letter-spacing: 0.5px;
-      color: #6D5E52; 
+      border-radius: 99px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0;
+      color: #6D5E52;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       white-space: nowrap;
       cursor: pointer;
     }
 
     .tab.active {
-      background: #9B8270; 
-      color: #FFFFFF; 
+      background: #9B8270;
+      color: #FFFFFF;
       font-weight: 600;
-      box-shadow: 0 4px 12px rgba(155, 130, 112, 0.3); 
+      box-shadow: 0 4px 12px rgba(155, 130, 112, 0.3);
     }
 
     /* --- 內容區塊與分頁 --- */
     .content {
-      padding: 0 20px 100px 20px; 
-      flex-grow: 1; 
+      padding: 0 20px 100px 20px;
+      flex-grow: 1;
     }
 
     .page-section {
-      display: none; 
+      display: none;
       opacity: 0;
       padding-top: 10px;
     }
 
     .page-section.active {
-      display: block; 
+      display: block;
       animation: fadeIn 0.5s forwards cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -137,12 +130,12 @@
     }
 
     .main-title {
-      font-size: 20px; 
+      font-size: 20px;
       font-weight: 600;
       color: #2C241E;
       margin: 32px 0 20px 0;
       padding-left: 12px;
-      border-left: 4px solid #9B8270; 
+      border-left: 4px solid #9B8270;
       line-height: 1.2;
       letter-spacing: 1px;
     }
@@ -160,7 +153,7 @@
 
     .sub-category-title::before {
       content: '';
-      width: 6px; 
+      width: 6px;
       height: 6px;
       background: #DCD3CB;
       border-radius: 50%;
@@ -169,23 +162,23 @@
     /* --- 資訊卡片 --- */
     .info-card {
       background: #FFFFFF;
-      border-radius: 12px; 
+      border-radius: 12px;
       padding: 20px;
       margin-bottom: 14px;
       box-shadow: 0 4px 20px rgba(74, 63, 53, 0.04);
-      border: 1px solid rgba(220, 211, 203, 0.6); 
+      border: 1px solid rgba(220, 211, 203, 0.6);
     }
 
     .info-card.highlight {
       background: linear-gradient(145deg, #FCFAF6, #FFFFFF);
-      border: 1px solid rgba(155, 130, 112, 0.3); 
+      border: 1px solid rgba(155, 130, 112, 0.3);
     }
 
     .info-card h3 {
       margin: 0 0 14px 0;
       font-size: 16px;
       font-weight: 600;
-      color: #2C241E; 
+      color: #2C241E;
       display: flex;
       align-items: center;
       letter-spacing: 1px;
@@ -205,11 +198,11 @@
       position: relative;
       padding-left: 16px;
       margin-bottom: 10px;
-      font-size: 14px; 
+      font-size: 14px;
       font-weight: 400;
-      color: #4A4036; 
-      line-height: 1.6; 
-      letter-spacing: 0.2px; 
+      color: #4A4036;
+      line-height: 1.6;
+      letter-spacing: 0.2px;
     }
 
     ul.info-list li:last-child {
@@ -229,7 +222,7 @@
     /* --- 價目表專用項目 --- */
     .price-item {
       padding: 12px 0;
-      border-bottom: 1px solid #F0EBE6; 
+      border-bottom: 1px solid #F0EBE6;
     }
     
     .price-item:last-child, .no-border {
@@ -239,27 +232,27 @@
     .price-item-header {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start; 
+      align-items: flex-start;
       margin-bottom: 4px;
     }
     .price-item-name {
-      font-size: 15px; 
+      font-size: 15px;
       font-weight: 500;
-      color: #2C241E; 
+      color: #2C241E;
       letter-spacing: 0.5px;
-      flex: 1; 
+      flex: 1;
       padding-right: 10px;
     }
     .price-item-price {
-      font-size: 15px; 
-      font-weight: 600; 
-      color: #9B8270; 
+      font-size: 15px;
+      font-weight: 600;
+      color: #9B8270;
       letter-spacing: 0.5px;
-      white-space: nowrap; 
+      white-space: nowrap;
     }
     .price-item-desc {
-      font-size: 13px; 
-      color: #7A695C; 
+      font-size: 13px;
+      color: #7A695C;
       margin: 4px 0 0 0;
       line-height: 1.5;
       letter-spacing: 0.2px;
@@ -268,11 +261,11 @@
     /* --- 底部浮動按鈕區塊 --- */
     .bottom-actions {
       position: fixed;
-      bottom: 24px; 
+      bottom: 24px;
       left: 50%;
       transform: translateX(-50%);
       width: calc(100% - 24px);
-      max-width: 440px; 
+      max-width: 440px;
       display: flex;
       gap: 8px;
       z-index: 1000;
@@ -284,22 +277,22 @@
       align-items: center;
       justify-content: center;
       gap: 4px;
-      padding: 10px 0; 
+      padding: 10px 0;
       border-radius: 99px;
-      font-size: 13px; 
+      font-size: 13px;
       font-weight: 500;
       text-decoration: none;
       transition: all 0.3s ease;
       letter-spacing: 0.5px;
       white-space: nowrap;
       cursor: pointer;
-      backdrop-filter: blur(10px); 
+      backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
 
     .btn-home {
-      background: rgba(253, 251, 248, 0.85); 
-      color: #6D5E52; 
+      background: rgba(253, 251, 248, 0.85);
+      color: #6D5E52;
       border: 1px solid rgba(220, 211, 203, 0.8);
       box-shadow: 0 4px 16px rgba(109, 94, 82, 0.08);
     }
@@ -308,8 +301,8 @@
     }
     
     .btn-map {
-      background: rgba(253, 251, 248, 0.85); 
-      color: #6D5E52; 
+      background: rgba(253, 251, 248, 0.85);
+      color: #6D5E52;
       border: 1px solid rgba(220, 211, 203, 0.8);
       box-shadow: 0 4px 16px rgba(109, 94, 82, 0.08);
     }
@@ -318,10 +311,10 @@
     }
 
     .btn-line {
-      background: rgba(155, 130, 112, 0.92); 
+      background: rgba(155, 130, 112, 0.92);
       color: #FFFFFF;
       border: 1px solid rgba(155, 130, 112, 0.4);
-      box-shadow: 0 4px 16px rgba(155, 130, 112, 0.35); 
+      box-shadow: 0 4px 16px rgba(155, 130, 112, 0.35);
     }
     .btn-line:active {
       background: rgba(138, 114, 97, 0.95);
@@ -405,36 +398,36 @@
       <h3>訂製單根 / 輕柔多根系列</h3>
       <p class="price-item-desc" style="margin-top: -6px; margin-bottom: 16px;">(全面升級：零負重感頂級軟毛 x 高階低敏低氣味黑膠)</p>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">100 根 (清新裸妝)</span> <span class="price-item-price">$ 1,400</span></div>
+        <div class="price-item-header"><span class="price-item-name">100 根 (清新裸妝)</span> <span class="price-item-price">$1,400</span></div>
        </div>
        <div class="price-item">
         <div class="price-item-header">
          <span class="price-item-name">120 根 (自然有神) <span style="color: #9B8270; font-size: 13px; font-weight: 600; margin-left: 4px;">🌟 人氣首選</span></span> 
-         <span class="price-item-price">$ 1,600</span>
+         <span class="price-item-price">$1,600</span>
         </div>
        </div>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">140 根 (精緻微濃)</span> <span class="price-item-price">$ 1,800</span></div>
+        <div class="price-item-header"><span class="price-item-name">140 根 (精緻微濃)</span> <span class="price-item-price">$1,800</span></div>
        </div>
        <div class="price-item no-border">
-        <div class="price-item-header"><span class="price-item-name">160 根 (華麗眼線)</span> <span class="price-item-price">$ 2,000</span></div>
+        <div class="price-item-header"><span class="price-item-name">160 根 (華麗眼線)</span> <span class="price-item-price">$2,000</span></div>
        </div>
 
       <h3 class="mt-title">進階加購升級</h3>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">下睫毛嫁接</span> <span class="price-item-price">＋$ 400</span></div>
+        <div class="price-item-header"><span class="price-item-name">下睫毛嫁接</span> <span class="price-item-price">+$400</span></div>
         <p class="price-item-desc">上下呼應，大眼效果加倍</p>
        </div>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">LED 光固黑膠技術</span> <span class="price-item-price">＋$ 300</span></div>
+        <div class="price-item-header"><span class="price-item-name">LED 光固黑膠技術</span> <span class="price-item-price">+$300</span></div>
         <p class="price-item-desc">接完即刻洗臉／持久度翻倍</p>
        </div>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">接睫後做翹 (塑形)</span> <span class="price-item-price">＋$ 800</span></div>
+        <div class="price-item-header"><span class="price-item-name">接睫後做翹 (塑形)</span> <span class="price-item-price">+$800</span></div>
         <p class="price-item-desc">真假睫毛向上拉提／眼神瞬間放大</p>
        </div>
        <div class="price-item no-border">
-        <div class="price-item-header"><span class="price-item-name">👑 完美眼眸套餐</span> <span class="price-item-price">＋$ 1,000</span></div>
+        <div class="price-item-header"><span class="price-item-name">👑 完美眼眸套餐</span> <span class="price-item-price">+$1,000</span></div>
         <p class="price-item-desc" style="color: #9B8270; font-weight: 500;">同日加購「LED＋做翹」，套餐限定優惠！</p>
        </div>
      </div>
@@ -445,14 +438,14 @@
       <h3>自然毛流重塑</h3>
       <p class="price-item-desc" style="margin-top: -6px; margin-bottom: 16px;">(溫和校正原生毛流，全品項皆含：深層保濕增黑修護精華)</p>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">深層修護睫毛管理 (上睫)</span> <span class="price-item-price">$ 1,600</span></div>
+        <div class="price-item-header"><span class="price-item-name">深層修護睫毛管理 (上睫)</span> <span class="price-item-price">$1,600</span></div>
        </div>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">下睫毛深層管理</span> <span class="price-item-price">$ 800</span></div>
-        <p class="price-item-desc">🌟 與上睫同日加購 ＋$ 500</p>
+        <div class="price-item-header"><span class="price-item-name">下睫毛深層管理</span> <span class="price-item-price">$800</span></div>
+        <p class="price-item-desc">🌟 與上睫同日加購 +$500</p>
        </div>
        <div class="price-item no-border">
-        <div class="price-item-header"><span class="price-item-name">精緻野生眉 (毛流矯正)</span> <span class="price-item-price">$ 1,600</span></div>
+        <div class="price-item-header"><span class="price-item-name">精緻野生眉 (毛流矯正)</span> <span class="price-item-price">$1,600</span></div>
        </div>
      </div>
 
@@ -461,16 +454,16 @@
      <div class="info-card">
       <h3>各項卸除服務</h3>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">本店卸除 (當日續接)</span> <span class="price-item-price">$ 200</span></div>
+        <div class="price-item-header"><span class="price-item-name">本店卸除 (當日續接)</span> <span class="price-item-price">$200</span></div>
        </div>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">本店純卸除 (無續接)</span> <span class="price-item-price">$ 300</span></div>
+        <div class="price-item-header"><span class="price-item-name">本店純卸除 (無續接)</span> <span class="price-item-price">$300</span></div>
        </div>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">他店卸除 (當日續接)</span> <span class="price-item-price">$ 300</span></div>
+        <div class="price-item-header"><span class="price-item-name">他店卸除 (當日續接)</span> <span class="price-item-price">$300</span></div>
        </div>
        <div class="price-item no-border">
-        <div class="price-item-header"><span class="price-item-name">他店純卸除 (無續接)</span> <span class="price-item-price">$ 500</span></div>
+        <div class="price-item-header"><span class="price-item-name">他店純卸除 (無續接)</span> <span class="price-item-price">$500</span></div>
         <p class="price-item-desc">備註：若為他店 LED 睫毛，視殘留情況酌收 $100~$200 特殊卸除費。</p>
        </div>
      </div>
@@ -489,7 +482,7 @@
      </div>
     </section>
 
-    <!-- ================= 分頁 3：定妝價目 (已刪除重複，保留一份) ================= -->
+    <!-- ================= 分頁 3：定妝價目 ================= -->
     <section id="page-makeup" class="page-section">
      <h2 class="main-title">定妝價目</h2>
      
@@ -498,16 +491,16 @@
       <h3>半永久微妝美學</h3>
       <p class="price-item-desc" style="margin-top: -6px; margin-bottom: 16px;">(全程使用拋棄式無菌耗材 x 頂級植物性色乳，打造宛若天生的素顏微妝)</p>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">隱形美瞳線 (自然深邃)</span> <span class="price-item-price">$ 6,800</span></div>
+        <div class="price-item-header"><span class="price-item-name">隱形美瞳線 (自然深邃)</span> <span class="price-item-price">$6,800</span></div>
        </div>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">專屬柔霧眉 (客製眉型設計)</span> <span class="price-item-price">$ 8,800</span></div>
+        <div class="price-item-header"><span class="price-item-name">專屬柔霧眉 (客製眉型設計)</span> <span class="price-item-price">$8,800</span></div>
        </div>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">水光透潤蜜唇 (含烏唇校色)</span> <span class="price-item-price">$ 11,800</span></div>
+        <div class="price-item-header"><span class="price-item-name">水光透潤蜜唇 (含烏唇校色)</span> <span class="price-item-price">$11,800</span></div>
        </div>
        <div class="price-item no-border">
-        <div class="price-item-header"><span class="price-item-name">科技無創眉色淡化 (溫和洗去老舊殘色)</span> <span class="price-item-price">$ 2,500 / 次</span></div>
+        <div class="price-item-header"><span class="price-item-name">科技無創眉色淡化 (溫和洗去老舊殘色)</span> <span class="price-item-price">$2,500 / 次</span></div>
        </div>
        <div style="margin-top: 16px; padding-top: 12px; border-top: 1px dashed #EAE3DC;">
          <p class="price-item-desc" style="color: #9B8270; font-weight: 500; text-align: left; line-height: 1.6;">
