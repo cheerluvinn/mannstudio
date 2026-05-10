@@ -67,36 +67,6 @@
       text-indent: 2px; 
     }
 
-    /* --- 文字連結 --- */
-    .header-meta {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 8px; 
-    }
-
-    .meta-link {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      color: #6D5E52; 
-      font-size: 13px;
-      font-weight: 500;
-      text-decoration: none;
-      letter-spacing: 0.5px;
-      transition: color 0.3s ease;
-    }
-
-    .meta-link:hover, .meta-link:active {
-      color: #2C241E;
-    }
-
-    .meta-icon {
-      width: 14px;
-      height: 14px;
-      fill: currentColor;
-    }
-
     /* --- 分頁導覽列 --- */
     .tabs {
       position: sticky;
@@ -301,10 +271,10 @@
       bottom: 24px; 
       left: 50%;
       transform: translateX(-50%);
-      width: calc(100% - 40px);
+      width: calc(100% - 24px);
       max-width: 440px; 
       display: flex;
-      gap: 12px;
+      gap: 8px;
       z-index: 1000;
     }
 
@@ -313,14 +283,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      padding: 12px 0; 
+      gap: 4px;
+      padding: 10px 0; 
       border-radius: 99px;
-      font-size: 14px; 
+      font-size: 13px; 
       font-weight: 500;
       text-decoration: none;
       transition: all 0.3s ease;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
       cursor: pointer;
       backdrop-filter: blur(10px); 
       -webkit-backdrop-filter: blur(10px);
@@ -333,6 +304,16 @@
       box-shadow: 0 4px 16px rgba(109, 94, 82, 0.08);
     }
     .btn-home:active {
+      background: rgba(245, 241, 235, 0.95);
+    }
+    
+    .btn-map {
+      background: rgba(253, 251, 248, 0.85); 
+      color: #6D5E52; 
+      border: 1px solid rgba(220, 211, 203, 0.8);
+      box-shadow: 0 4px 16px rgba(109, 94, 82, 0.08);
+    }
+    .btn-map:active {
       background: rgba(245, 241, 235, 0.95);
     }
 
@@ -355,13 +336,6 @@
    <header class="header">
     <h1>漫恩美學</h1>
     <p>日式美睫 ‧ 睫毛管理 ‧ 質感定妝</p>
-    
-    <div class="header-meta">
-     <a href="https://www.google.com/maps/place/%E6%BC%AB%E6%81%A9%E7%BE%8E%E5%AD%B8%EF%BD%9CMann+Studio/@25.0428412,121.5520911,21z/data=!4m6!3m5!1s0x3442ab14b874e725:0xa10210c443fa3ecc!8m2!3d25.0428366!4d121.5520397!16s%2Fg%2F11stbjvpv8" target="_blank" class="meta-link">
-      <svg class="meta-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-      查看工作室位置
-     </a>
-    </div>
    </header>
 
    <nav class="tabs" id="navTabs">
@@ -627,9 +601,13 @@
     <div class="action-btn btn-home" id="btn-back-home">
      返回首頁
     </div>
+    <a href="https://maps.app.goo.gl/qaqQ4aovzDQ8UExQ6" target="_blank" class="action-btn btn-map">
+     <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+     工作室位置
+    </a>
     <a href="https://lin.ee/RycxNGf" target="_blank" class="action-btn btn-line">
-     <svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: currentColor;"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992z"/></svg>
-     LINE 預約
+     <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992z"/></svg>
+     LINE預約
     </a>
    </div>
 
