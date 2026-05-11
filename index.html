@@ -268,7 +268,7 @@
       width: calc(100% - 24px);
       max-width: 440px;
       display: flex;
-      gap: 8px;
+      gap: 12px; /* 稍微增加按鈕間的間距，視覺更寬敞 */
       z-index: 1000;
     }
 
@@ -277,10 +277,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 4px;
-      padding: 10px 0;
+      gap: 6px;
+      padding: 12px 0; /* 稍微增加按鈕高度，讓手指更好點擊 */
       border-radius: 99px;
-      font-size: 13px;
+      font-size: 14px; /* 字體稍微加大 */
       font-weight: 500;
       text-decoration: none;
       transition: all 0.3s ease;
@@ -290,19 +290,9 @@
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
-
-    .btn-home {
-      background: rgba(253, 251, 248, 0.85);
-      color: #6D5E52;
-      border: 1px solid rgba(220, 211, 203, 0.8);
-      box-shadow: 0 4px 16px rgba(109, 94, 82, 0.08);
-    }
-    .btn-home:active {
-      background: rgba(245, 241, 235, 0.95);
-    }
     
     .btn-map {
-      background: rgba(253, 251, 248, 0.85);
+      background: rgba(253, 251, 248, 0.95); /* 稍微調高不透明度，讓質感更好 */
       color: #6D5E52;
       border: 1px solid rgba(220, 211, 203, 0.8);
       box-shadow: 0 4px 16px rgba(109, 94, 82, 0.08);
@@ -312,7 +302,7 @@
     }
 
     .btn-line {
-      background: rgba(155, 130, 112, 0.92);
+      background: rgba(155, 130, 112, 0.95); /* 稍微調高不透明度 */
       color: #FFFFFF;
       border: 1px solid rgba(155, 130, 112, 0.4);
       box-shadow: 0 4px 16px rgba(155, 130, 112, 0.35);
@@ -593,15 +583,12 @@
    
    <!-- ================= 頁面最下層浮動按鈕 ================= -->
    <div class="bottom-actions">
-    <div class="action-btn btn-home" id="btn-back-home">
-     返回首頁
-    </div>
     <a href="https://maps.app.goo.gl/qaqQ4aovzDQ8UExQ6" target="_blank" class="action-btn btn-map">
-     <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+     <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: currentColor;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
      工作室位置
     </a>
     <a href="https://lin.ee/RycxNGf" target="_blank" class="action-btn btn-line">
-     <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992z"/></svg>
+     <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: currentColor;"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992z"/></svg>
      LINE預約
     </a>
    </div>
@@ -612,7 +599,6 @@
     document.addEventListener("DOMContentLoaded", function() {
       const tabs = document.querySelectorAll('.tab');
       const pages = document.querySelectorAll('.page-section');
-      const btnBackHome = document.getElementById('btn-back-home');
 
       // 切換分頁邏輯
       function switchPage(targetId) {
@@ -654,22 +640,10 @@
           switchPage(target);
         });
       });
-
-      // 綁定「返回首頁」按鈕事件
-      if (btnBackHome) {
-        btnBackHome.addEventListener('click', function(e) {
-          e.preventDefault();
-          switchPage('page-notice');
-        });
-      }
     });
   </script>
 </body>
 </html>
-
-
-
-
 
 
 ```
