@@ -78,14 +78,20 @@
       padding: 12px 16px;
       z-index: 100;
       box-shadow: 0 4px 16px rgba(74, 63, 53, 0.05);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .tabs::-webkit-scrollbar {
+      display: none;
     }
 
     .tab {
-      flex: 1;
+      flex: 1 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 0;
+      padding: 10px 14px;
       text-align: center;
       text-decoration: none;
       background: #F5F1EB;
@@ -322,6 +328,7 @@
 
    <nav class="tabs" id="navTabs">
     <div class="tab active" data-target="page-notice">預約須知</div>
+    <div class="tab" data-target="page-promo">優惠活動</div>
     <div class="tab" data-target="page-lash">美睫價目</div>
     <div class="tab" data-target="page-makeup">定妝價目</div>
     <div class="tab" data-target="page-aftercare">保養指南</div>
@@ -346,7 +353,7 @@
         <li>當天為您服務完畢後，尾款可使用<strong>現金或轉帳支付</strong>。</li>
        </ul>
        <div style="margin-top: 20px; text-align: center; font-size: 12px; color: #8A7261; font-weight: 500; letter-spacing: 1px;">
-        ※ 漫恩美學保有最終解釋與修改活動之權利 ※
+        🤍 漫恩美學保有最終解釋與修改活動之權利 🤍
        </div>
      </div>
 
@@ -360,7 +367,7 @@
       </ul>
      </div>
 
-     <h3 class="sub-category-title">日式美睫注意事項 (行前準備)</h3>
+     <h3 class="sub-category-title">日式美睫注意事項｜行前準備</h3>
      <div class="info-card">
        <ul class="info-list">
         <li>前來時<strong>請勿夾睫毛或刷睫毛膏</strong>，以免影響接點或藥水作用。</li>
@@ -368,39 +375,99 @@
        </ul>
      </div>
 
-     <h3 class="sub-category-title">質感定妝注意事項 (行前準備)</h3>
+     <h3 class="sub-category-title">質感定妝注意事項｜行前準備</h3>
      <div class="info-card">
        <ul class="info-list">
         <li><strong>前一週：</strong>請暫停使用含酸類、美白成分之保養品，並盡量避免熬夜及飲酒。</li>
-        <li><strong>操作唇部者：</strong>預約前一週請務必加強唇部保濕（可厚敷凡士林），避免脫皮影響上色效果。</li>
+        <li><strong>操作唇部者：</strong>預約前一週請務必加強唇部保濕，建議可厚敷凡士林，避免脫皮影響上色效果。</li>
        </ul>
      </div>
     </section>
 
-    <!-- ================= 分頁 2：美睫價目 ================= -->
+    <!-- ================= 分頁 2：優惠活動 ================= -->
+    <section id="page-promo" class="page-section">
+     <h2 class="main-title">優惠活動</h2>
+     
+     <h3 class="sub-category-title">漫恩專屬回饋</h3>
+     <div class="info-card highlight">
+      <h3 style="color: #9B8270;">🎁 常態互動優惠</h3>
+      <ul class="info-list" style="margin-bottom: 20px;">
+       <li><strong>📸 限動打卡分享：</strong> 於 IG 限時動態分享成果並標記本店，下次消費美睫/管理 <strong>現折 $50</strong>，定妝項目 <strong>現折 $300</strong>。</li>
+       <li><strong>👯‍♀️ 好友推薦：</strong> 推薦親友成功預約，新客首次消費美睫/管理 <strong>現折 $100</strong>，定妝項目 <strong>現折 $500</strong>；推薦人亦可獲得同額的折抵金。</li>
+      </ul>
+
+      <h3 style="color: #9B8270; border-top: 1px dashed #DCD3CB; padding-top: 16px;">💎 常客專屬回饋</h3>
+      <p class="price-item-desc" style="margin-bottom: 12px;">習慣定期保養的女孩，為您準備了專屬優惠：</p>
+      <ul class="info-list">
+       <li><strong>美睫常客：</strong> 距離上次施作 4 週內（28 天）回訪重接，享「本店卸除免費」加「總價現折 $200」。</li>
+       <li><strong>管理常客：</strong> 距離上次施作 6 週內（45 天）回訪整理，總價 <strong>現折 $200</strong>。</li>
+       <li><strong>跨項體驗：</strong> 凡曾於本店消費的女孩，首次跨項體驗「美睫或管理」<strong>現折 $100</strong>，體驗「定妝項目」<strong>現折 $300</strong>。</li>
+      </ul>
+      
+      <div style="margin-top: 18px; background: rgba(220, 211, 203, 0.15); padding: 12px; border-radius: 8px;">
+        <p class="price-item-desc" style="margin: 0 0 6px 0; font-size: 13px; font-weight: 600; color: #6D5E52;">💡 活動備註：</p>
+        <p class="price-item-desc" style="margin: 0; font-size: 12px; text-align: justify; line-height: 1.6; color: #8A7261;">
+         1. 「打卡分享」與「好友推薦」的折抵金視同現金，<strong>可與常客回饋合併使用</strong>，且無使用期限。<br>
+         2. 店內各項折扣若遇重複，結帳時將自動為您「擇優折抵最高金額」使用。
+        </p>
+      </div>
+     </div>
+    </section>
+
+    <!-- ================= 分頁 3：美睫價目 ================= -->
     <section id="page-lash" class="page-section">
      <h2 class="main-title">美睫價目</h2>
+
+     <!-- 🌟 漫恩獨家技術亮點 (新增) -->
+     <h3 class="sub-category-title" style="color: #9B8270; margin-top: 24px;">✨ 漫恩三大技術升級</h3>
+     <div class="info-card highlight" style="border: 1px solid rgba(155, 130, 112, 0.4); padding: 18px 20px;">
+       
+       <div style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px dashed #EAE3DC;">
+         <div style="display: flex; align-items: center; margin-bottom: 6px;">
+           <span style="background: #9B8270; color: #FFF; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; margin-right: 8px; letter-spacing: 0.5px;">全品項標配</span>
+           <h4 style="margin: 0; font-size: 15px; color: #2C241E;">💧 零等待期｜鎖固精華</h4>
+         </div>
+         <p style="margin: 0; font-size: 13px; color: #7A695C; line-height: 1.5;">全面升級日本頂級黑膠＋Super Lock 鎖固精華。接完即刻安全固化，回家馬上可正常洗臉！</p>
+       </div>
+
+       <div style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px dashed #EAE3DC;">
+         <div style="display: flex; align-items: center; margin-bottom: 6px;">
+           <span style="background: rgba(155, 130, 112, 0.15); color: #9B8270; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; margin-right: 8px; letter-spacing: 0.5px;">加購升級</span>
+           <h4 style="margin: 0; font-size: 15px; color: #2C241E;">🌟 持久極致｜LED 光固技術</h4>
+         </div>
+         <p style="margin: 0; font-size: 13px; color: #7A695C; line-height: 1.5;">光固膠結構強韌，抗油抗汗有感升級。低敏低刺激，油性肌膚與孕婦皆能安心施作。</p>
+       </div>
+
+       <div>
+         <div style="display: flex; align-items: center; margin-bottom: 6px;">
+           <span style="background: rgba(155, 130, 112, 0.15); color: #9B8270; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; margin-right: 8px; letter-spacing: 0.5px;">加購升級</span>
+           <h4 style="margin: 0; font-size: 15px; color: #2C241E;">🪄 眼神放大｜接睫後塑形</h4>
+         </div>
+         <p style="margin: 0; font-size: 13px; color: #7A695C; line-height: 1.5;">專為下垂睫毛設計！將真假睫毛完美向上拉提，告別兩層分岔尷尬，自帶隱形放大片效果。</p>
+       </div>
+
+     </div>
 
      <!-- 子分類：日式美睫 -->
      <h3 class="sub-category-title">日式美睫</h3>
      <div class="info-card">
       <h3>訂製單根 / 輕柔多根系列</h3>
-      <p class="price-item-desc" style="margin-top: -12px; margin-bottom: 8px;">(全面升級：零負重感頂級軟毛 x 高階低敏低氣味黑膠)</p>
-      <p class="price-item-desc" style="color: #9B8270; font-weight: 500; margin-top: 0; margin-bottom: 16px;">✨ 現場可依眼型客製化：經典單根 / 輕柔多根 / 仙子漫畫款 (不加價)</p>
+      <p class="price-item-desc" style="margin-top: -12px; margin-bottom: 8px;">全面升級：零負重感頂級軟毛 x 高階低敏低氣味黑膠</p>
+      <p class="price-item-desc" style="color: #9B8270; font-weight: 500; margin-top: 0; margin-bottom: 16px;">🤍 現場可依眼型客製化：經典單根 / 輕柔多根 / 仙子漫畫款，均不加價</p>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">100 根 (清新裸妝)</span> <span class="price-item-price">$1,400</span></div>
+        <div class="price-item-header"><span class="price-item-name">100 根｜清新裸妝</span> <span class="price-item-price">$1,400</span></div>
        </div>
        <div class="price-item">
         <div class="price-item-header">
-         <span class="price-item-name">120 根 (自然有神) <span style="color: #9B8270; font-size: 13px; font-weight: 600; margin-left: 4px;">🌟 人氣首選</span></span> 
+         <span class="price-item-name">120 根｜自然有神 <span style="color: #9B8270; font-size: 13px; font-weight: 600; margin-left: 4px;">🌟 人氣首選</span></span> 
          <span class="price-item-price">$1,600</span>
         </div>
        </div>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">140 根 (精緻微濃)</span> <span class="price-item-price">$1,800</span></div>
+        <div class="price-item-header"><span class="price-item-name">140 根｜精緻微濃</span> <span class="price-item-price">$1,800</span></div>
        </div>
        <div class="price-item no-border">
-        <div class="price-item-header"><span class="price-item-name">160 根 (華麗眼線)</span> <span class="price-item-price">$2,000</span></div>
+        <div class="price-item-header"><span class="price-item-name">160 根｜華麗眼線</span> <span class="price-item-price">$2,000</span></div>
        </div>
 
       <h3 class="mt-title">進階加購升級</h3>
@@ -408,17 +475,21 @@
         <div class="price-item-header"><span class="price-item-name">下睫毛嫁接</span> <span class="price-item-price">+$400</span></div>
         <p class="price-item-desc">上下呼應，大眼效果加倍</p>
        </div>
-       <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">LED 光固黑膠技術</span> <span class="price-item-price">+$300</span></div>
-        <p class="price-item-desc">接完即刻洗臉／持久度翻倍</p>
+       
+       <!-- 強化凸顯 LED 與 塑形 -->
+       <div class="price-item" style="background: #FCFAF6; padding: 12px; margin: 10px 0; border-radius: 8px; border: 1px solid rgba(155, 130, 112, 0.2);">
+        <div class="price-item-header"><span class="price-item-name" style="color: #9B8270; font-weight: 600;">LED 光固技術</span> <span class="price-item-price">+$300</span></div>
+        <p class="price-item-desc">抗油抗汗／低敏低刺激／油肌首選，持久度翻倍</p>
        </div>
-       <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">接睫後做翹 (塑形)</span> <span class="price-item-price">+$800</span></div>
-        <p class="price-item-desc">真假睫毛向上拉提／眼神瞬間放大</p>
+       
+       <div class="price-item" style="background: #FCFAF6; padding: 12px; margin: 10px 0; border-radius: 8px; border: 1px solid rgba(155, 130, 112, 0.2);">
+        <div class="price-item-header"><span class="price-item-name" style="color: #9B8270; font-weight: 600;">接睫後塑形</span> <span class="price-item-price">+$800</span></div>
+        <p class="price-item-desc">真假睫毛向上拉提／告別原生毛下垂分層</p>
        </div>
-       <div class="price-item no-border">
-        <div class="price-item-header"><span class="price-item-name">👑 完美眼眸套餐</span> <span class="price-item-price">+$1,000</span></div>
-        <p class="price-item-desc" style="color: #9B8270; font-weight: 500;">同日加購「LED＋做翹」，套餐限定優惠！</p>
+       
+       <div class="price-item no-border" style="background: rgba(155, 130, 112, 0.1); padding: 14px 12px; margin-top: 12px; border-radius: 8px;">
+        <div class="price-item-header"><span class="price-item-name" style="font-weight: 600; color: #2C241E;">👑 完美眼眸套餐</span> <span class="price-item-price" style="font-size: 16px;">+$1,000</span></div>
+        <p class="price-item-desc" style="color: #8A7261; font-weight: 500;">同日加購「LED＋塑形」，享現省 $100 限定優惠！</p>
        </div>
      </div>
 
@@ -426,17 +497,17 @@
      <h3 class="sub-category-title">眉睫管理</h3>
      <div class="info-card">
       <h3>自然毛流重塑</h3>
-      <p class="price-item-desc" style="margin-top: -12px; margin-bottom: 16px;">(溫和校正原生毛流，全品項皆含：潤黑修護精華)</p>
+      <p class="price-item-desc" style="margin-top: -12px; margin-bottom: 16px;">溫和校正原生毛流，全品項皆含：潤黑修護精華</p>
        <div class="price-item">
         <div class="price-item-header"><span class="price-item-name">上睫毛深層管理</span> <span class="price-item-price">$1,600</span></div>
-        <p class="price-item-desc">🌟 若眼上留有嫁接睫毛，需同日加購「本店/他店卸除」</p>
+        <p class="price-item-desc">🤍 若眼上留有嫁接睫毛，需同日加購「本店/他店卸除」</p>
        </div>
        <div class="price-item">
         <div class="price-item-header"><span class="price-item-name">下睫毛深層管理</span> <span class="price-item-price">$600</span></div>
-        <p class="price-item-desc">🌟 與上睫同日加購 +$400</p>
+        <p class="price-item-desc">🤍 與上睫同日加購 +$400</p>
        </div>
        <div class="price-item no-border">
-        <div class="price-item-header"><span class="price-item-name">精緻野生眉 (毛流矯正)</span> <span class="price-item-price">$1,300</span></div>
+        <div class="price-item-header"><span class="price-item-name">精緻野生眉｜毛流矯正</span> <span class="price-item-price">$1,300</span></div>
        </div>
      </div>
 
@@ -445,41 +516,44 @@
      <div class="info-card">
       <h3>各項卸除服務</h3>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">本店卸除 (當日續接)</span> <span class="price-item-price">$200</span></div>
+        <div class="price-item-header"><span class="price-item-name">本店卸除｜當日續接</span> <span class="price-item-price">$200</span></div>
        </div>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">本店純卸除 (無續接)</span> <span class="price-item-price">$300</span></div>
+        <div class="price-item-header"><span class="price-item-name">本店純卸除｜無續接</span> <span class="price-item-price">$300</span></div>
        </div>
        <div class="price-item">
-        <div class="price-item-header"><span class="price-item-name">他店卸除 (當日續接)</span> <span class="price-item-price">$300</span></div>
+        <div class="price-item-header"><span class="price-item-name">他店卸除｜當日續接</span> <span class="price-item-price">$300</span></div>
        </div>
        <div class="price-item no-border">
-        <div class="price-item-header"><span class="price-item-name">他店純卸除 (無續接)</span> <span class="price-item-price">$500</span></div>
-        <p class="price-item-desc">備註：若為他店 LED 睫毛，視殘留情況酌收 $100~$200 特殊卸除費。</p>
+        <div class="price-item-header"><span class="price-item-name">他店純卸除｜無續接</span> <span class="price-item-price">$500</span></div>
+        <p class="price-item-desc">🤍 若為他店 LED 睫毛，視殘留情況酌收 $100~$200 特殊卸除費。</p>
        </div>
      </div>
 
-     <!-- 常客回饋活動 -->
-     <h3 class="sub-category-title">常客回饋活動</h3>
+     <!-- 子分類：專業居家保養 (新增) -->
+     <h3 class="sub-category-title">專業居家保養</h3>
      <div class="info-card highlight">
-      <h3 style="color: #9B8270;">🎁 漫恩限定・常客回饋</h3>
-      <p class="price-item-desc" style="margin-bottom: 12px;">習慣定期保養的女孩，我準備了貼心的折抵優惠：</p>
-      <ul class="info-list">
-       <li><strong>接睫毛 常客回歸：</strong>距離上次施作 4 週內（28 天）回來重新施作，享「本店卸除免費」＋「總價現折 $200」！</li>
-       <li><strong>眼眉保養 常客回歸：</strong>距離上次施作睫毛管理或野生眉 6 週內（45 天）回來整理，總價現折 $200！</li>
-       <li><strong>跨項體驗見面禮：</strong>老朋友想嘗試不一樣的自己？只要有做過睫毛的客人，首次體驗野生眉（或反之），結帳皆享首次體驗現折 $300！</li>
-      </ul>
+      <h3>漫恩嚴選｜沙龍級養護</h3>
+      <p class="price-item-desc" style="margin-top: -12px; margin-bottom: 16px;">延續完美狀態的秘密武器，現場皆可試用體驗</p>
+       <div class="price-item">
+        <div class="price-item-header"><span class="price-item-name">定型防護睫毛雨衣</span> <span class="price-item-price">$620</span></div>
+        <p class="price-item-desc">🤍 隔離油汗防潑水，接睫後必備的定型與延長壽命法寶</p>
+       </div>
+       <div class="price-item no-border">
+        <div class="price-item-header"><span class="price-item-name">深層賦活睫毛生長液</span> <span class="price-item-price">$950</span></div>
+        <p class="price-item-desc">🤍 針對原生毛囊深層滋養，睫毛管理與日常強健專用</p>
+       </div>
      </div>
     </section>
 
-    <!-- ================= 分頁 3：定妝價目 ================= -->
-     <!-- 子分類：眼眉保養 -->
-     <h3 class="sub-category-title">定妝價目</h3>
+    <!-- ================= 分頁 4：定妝價目 ================= -->
+    <section id="page-makeup" class="page-section">
+     <h2 class="main-title">定妝價目</h2>
      
      <h3 class="sub-category-title">質感定妝系列</h3>
      <div class="info-card">
       <h3>半永久微妝美學</h3>
-      <p class="price-item-desc" style="margin-top: -6px; margin-bottom: 16px;">(全程使用拋棄式無菌耗材 x 頂級植物性色乳，打造宛若天生的素顏微妝)</p>
+      <p class="price-item-desc" style="margin-top: -6px; margin-bottom: 16px;">全程使用拋棄式無菌耗材 x 頂級植物性色乳，打造宛若天生的素顏微妝</p>
        <div class="price-item">
         <div class="price-item-header"><span class="price-item-name">微妝美瞳線</span> <span class="price-item-price">$6,800</span></div>
        </div>
@@ -490,12 +564,12 @@
         <div class="price-item-header"><span class="price-item-name">水光透潤唇</span> <span class="price-item-price">$11,800</span></div>
        </div>
        <div class="price-item no-border">
-        <div class="price-item-header"><span class="price-item-name">溫和眉色淡化 (洗去老舊殘色)</span> <span class="price-item-price">$2,500 / 次</span></div>
+        <div class="price-item-header"><span class="price-item-name">溫和眉色淡化｜洗去老舊殘色</span> <span class="price-item-price">$2,500 / 次</span></div>
        </div>
        <div style="margin-top: 16px; padding-top: 12px; border-top: 1px dashed #EAE3DC;">
          <p class="price-item-desc" style="color: #9B8270; font-weight: 500; text-align: left; line-height: 1.6;">
-           🌟 紋繡定妝項目皆含：精緻臉型/眼型設計討論，與 3 個月內免費補色一次。<br>
-           (備註：眉色淡化除外)
+           🤍 紋繡定妝項目皆含：精緻臉型/眼型設計討論，與 3 個月內免費補色一次。<br>
+           ※ 備註：眉色淡化除外
          </p>
        </div>
      </div>
@@ -505,17 +579,17 @@
        <ul class="info-list">
         <li><strong>免費補色期：</strong> 首次施作後，需間隔至少 1 個月讓皮膚修復。提供 <strong>3 個月內免費補色一次</strong>（逾期視同放棄，不再展延）。</li>
        </ul>
-       <h3 class="mt-title">老客回歸補色優惠</h3>
+       <h3 class="mt-title">專屬回歸補色優惠</h3>
        <p class="price-item-desc" style="margin-bottom: 8px;">漫恩的作品掉色後需要補色維護？</p>
        <ul class="info-list">
         <li><strong>1 年內回歸補色：</strong> 原價 5 折</li>
         <li><strong>2 年內回歸補色：</strong> 原價 7 折</li>
-        <li><strong>超過 2 年或他店作品：</strong> 視同重新施作（依原價計費）</li>
+        <li><strong>超過 2 年或他店作品：</strong> 視同重新施作，依原價計費</li>
        </ul>
      </div>
     </section>
 
-    <!-- ================= 分頁 4：保養指南 ================= -->
+    <!-- ================= 分頁 5：保養指南 ================= -->
     <section id="page-aftercare" class="page-section">
      <h2 class="main-title">保養指南</h2>
      
@@ -527,10 +601,10 @@
         <li>為保護黑膠結構，洗臉時請避免使用蓮蓬頭強力直沖眼睛；<strong>24 小時內請先避開溫泉、烤箱或蒸氣室</strong>等極度高溫環境。</li>
        </ul>
 
-      <h3 class="mt-title">關於睫毛保養升級 (取消補睫)</h3>
+      <h3 class="mt-title">關於睫毛保養升級｜取消補睫</h3>
        <ul class="info-list">
-        <li>為維持睫毛根部健康、避免毛囊阻塞，並配合最新的「LED 光固」與「接後做翹」技術（長出後角度會改變，無法補接）。</li>
-        <li>我們<strong>全面取消局部補睫服務，一律採「溫和全卸除重接」</strong>。讓您每一次都能帶著最乾淨、最完美的全新睫毛離開！</li>
+        <li>為維持睫毛根部健康、避免毛囊阻塞，並配合最新的「LED 光固」與「接睫後塑形」技術，因真毛長出後角度會改變，故無法補接。</li>
+        <li><strong>全面取消局部補睫服務，一律採「溫和全卸除重接」</strong>。讓您每一次都能帶著最乾淨、最完美的全新睫毛離開！</li>
        </ul>
 
       <h3 class="mt-title">進階技術保養重點</h3>
@@ -642,7 +716,3 @@
   </script>
 </body>
 </html>
-
-
-
-
