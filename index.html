@@ -40,7 +40,7 @@
     /* --- 上方 Header 區塊 --- */
     .header {
       text-align: center;
-      padding: 24px 20px 16px;
+      padding: 12px 20px 10px;
       background: #FFFFFF;
       display: flex;
       flex-direction: column;
@@ -49,21 +49,28 @@
 
     .header h1 {
       margin: 0 0 6px 0;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 600;
       color: #2C241E;
-      letter-spacing: 4px;
-      text-indent: 4px;
+      letter-spacing: 5px;
+      text-indent: 5px;
       word-wrap: break-word;
     }
 
-    .header p {
-      margin: 0;
+    .header .slogan {
+      margin: 0 0 4px 0;
       font-size: 13px;
-      color: #6D5E52;
+      color: #9B8270;
       font-weight: 500;
+      letter-spacing: 1.5px;
+    }
+
+    .header .sub-title {
+      margin: 0;
+      font-size: 11px;
+      color: #8A7261;
+      font-weight: 400;
       letter-spacing: 2px;
-      text-indent: 2px;
     }
 
     /* --- 分頁導覽列 --- */
@@ -308,13 +315,13 @@
     /* --- 底部浮動按鈕區塊 --- */
     .bottom-actions {
       position: fixed;
-      bottom: 24px;
+      bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
-      width: calc(100% - 24px);
+      width: calc(100% - 32px);
       max-width: 440px;
       display: flex;
-      gap: 12px;
+      gap: 10px;
       z-index: 1000;
     }
 
@@ -324,9 +331,9 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      padding: 12px 0;
+      padding: 10px 0;
       border-radius: 99px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
       text-decoration: none;
       transition: all 0.3s ease;
@@ -365,7 +372,8 @@
     
    <header class="header">
     <h1>漫恩美學</h1>
-    <p>日式美睫・眉睫管理・質感定妝</p>
+    <p class="slogan">每天都擁有剛剛好的漂亮 ☁️</p>
+    <p class="sub-title">日式美睫・眉睫管理・質感定妝</p>
    </header>
 
    <nav class="tabs" id="navTabs">
@@ -386,7 +394,7 @@
      <div class="info-card highlight">
        <ul class="info-list">
         <li>為保留專屬時段，<strong>預約需於期限內完成定金匯款</strong>，才算預約成功。</li>
-        <li>考量每一位客人的隱私與消毒準備時間，目前不開放提早候位。請於預約時間<strong>準時抵達</strong>即可，把專屬的時段完整留給你。</li>
+        <li>為確保每一位客人的專屬隱私空間與消毒準備時間，目前不開放提早候位。請於預約時間<strong>準時抵達</strong>即可，把專屬的時段完整留給你。</li>
         <li>遲到 15 分鐘內，<strong>將按比例縮減操作時間（如接睫根數），並以原項目計價</strong>；遲到超過 15 分鐘將視同取消並沒收定金。</li>
         <li>需更改時間或取消，最晚請在<strong>預約日 3 天前</strong>提前告知。</li>
         <li>當日無故未到者，定金恕不退還並將列入黑名單，不再提供預約服務。</li>
