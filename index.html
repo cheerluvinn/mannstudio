@@ -63,7 +63,7 @@
     }
 
     .mann-header-title {
-      font-size: 18px;
+      font-size: 21px; /* 放大比例 */
       font-weight: 600;
       color: var(--text-main);
       letter-spacing: 0.15em;
@@ -71,7 +71,7 @@
     }
 
     .mann-header-subtitle {
-      font-size: 12px;
+      font-size: 13px; /* 放大比例 */
       color: var(--brand-primary);
       letter-spacing: 0.1em;
       font-weight: 500;
@@ -101,7 +101,7 @@
       text-align: center;
       padding: 14px 0;
       color: var(--text-muted);
-      font-size: 13px;
+      font-size: 14px; /* 放大至 14px 基準 */
       font-weight: 500;
       cursor: pointer;
       border-bottom: 2px solid transparent;
@@ -135,11 +135,11 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* --- 排版系統：層級與間距 (Strict Vertical Rhythm) --- */
+    /* --- 排版系統：層級與間距 (14px 黃金基準) --- */
     
     /* 1. 區塊大標題 */
     .mann-section-title {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 600;
       color: var(--text-main);
       border-left: 2px solid var(--brand-primary);
@@ -164,15 +164,15 @@
 
     /* 4. 卡片內小標題 */
     .mann-sub-title {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
       color: var(--brand-primary);
-      margin-bottom: 12px !important; /* 縮小與下方內容的距離 */
+      margin-bottom: 12px !important; 
     }
 
-    /* 5. 一般內文 */
+    /* 5. 一般內文 (14px) */
     .mann-card-desc {
-      font-size: 13px;
+      font-size: 14px;
       color: var(--text-sub);
     }
 
@@ -182,10 +182,10 @@
     }
 
     ul.mann-list li {
-      font-size: 13px;
+      font-size: 14px; /* 放大至 14px 基準 */
       color: var(--text-sub);
       position: relative;
-      padding-left: 14px;
+      padding-left: 16px;
       margin-bottom: 10px;
     }
 
@@ -205,13 +205,13 @@
       top: 0;
       font-weight: bold;
       color: var(--brand-primary);
-      font-size: 14px;
+      font-size: 15px;
     }
 
     /* 7. 分隔線 */
     .mann-divider {
       border-top: 1px dashed var(--border-dashed);
-      margin: 24px 0 !important; /* 強制覆蓋通用間距 */
+      margin: 24px 0 !important; 
       height: 1px;
     }
 
@@ -238,11 +238,11 @@
     .mann-price-header {
       display: flex;
       justify-content: space-between;
-      align-items: baseline; /* 讓名字與價格的文字底部對齊 */
+      align-items: baseline; 
     }
 
     .mann-price-name {
-      font-size: 14px;
+      font-size: 15px; /* 放大比例 */
       color: var(--text-main);
       font-weight: 500;
       flex: 1;
@@ -250,14 +250,14 @@
     }
 
     .mann-price-value {
-      font-size: 14px;
+      font-size: 15px; /* 放大比例 */
       color: var(--brand-primary);
       font-weight: 600;
       white-space: nowrap;
     }
 
     .mann-price-note {
-      font-size: 12px;
+      font-size: 13px; /* 放大比例 */
       color: var(--text-muted);
       margin-top: 4px;
       display: block;
@@ -266,7 +266,7 @@
     /* --- 輔助 UI 組件 --- */
     .mann-badge {
       display: inline-block;
-      font-size: 11px;
+      font-size: 12px; /* 放大比例 */
       color: var(--brand-primary);
       border: 1px solid var(--brand-primary);
       padding: 2px 6px;
@@ -304,7 +304,7 @@
       justify-content: center;
       padding: 14px 0;
       border-radius: 4px;
-      font-size: 13px;
+      font-size: 14px; /* 與內文統一 */
       font-weight: 500;
       text-decoration: none;
       letter-spacing: 0.1em;
@@ -355,12 +355,14 @@
       
       <div class="mann-section-title">預約定金與相關規定</div>
       <div class="mann-card">
+        <div class="mann-card-desc">
+          為了讓每位客人都能享受最細緻且專業的服務品質，請在預約前留意以下規範：
+        </div>
         <ul class="mann-list">
           <li>為保留專屬時段，<strong>預約需於期限內完成定金匯款</strong>，才算預約成功。</li>
-          <li>為確保每一位客人的專屬隱私空間與消毒準備時間，目前不開放提早候位。請於預約時間<strong>準時抵達</strong>即可，把專屬的時段完整留給你。</li>
-          <li>遲到 15 分鐘內，<strong>將按比例縮減操作時間（如接睫根數），並以原項目計價</strong>；遲到超過 15 分鐘將視同取消並沒收定金。</li>
-          <li>需更改時間或取消，最晚請在<strong>預約日 3 天前</strong>提前告知。</li>
-          <li>當日無故未到者，定金恕不退還並將列入黑名單，不再提供預約服務。</li>
+          <li>因漫恩專注於慢工細作，每日能服務的時段有限。如需更改時間或取消，最晚請在<strong>預約日 3 天前</strong>提前告知。當日臨時取消或無故未到者，定金恕不退還並將列入黑名單。</li>
+          <li>為確保每位客人的隱私，並讓我能為你準備最乾淨的放鬆空間，目前不開放提早候位。請於預約時間<strong>準時抵達</strong>即可。</li>
+          <li>若遇突發狀況遲到，15 分鐘內<strong>將按比例縮減操作時間並以原項目計價</strong>；遲到超過 15 分鐘將視同取消並沒收定金。</li>
         </ul>
         <div class="mann-divider"></div>
         <h3 class="mann-sub-title">當日支付說明</h3>
@@ -374,24 +376,23 @@
         <ul class="mann-list">
           <li><strong>美睫保固：</strong>操作後 3 日內若有「非人為因素」之單眼大量異常脫落（超過 1/3），請立即拍照回傳，將為你安排免費回補一次。因揉眼、卸妝不當等個人行為導致脫落，恕不在保固範圍內。</li>
           <li><strong>美感與退費：</strong>美感屬於個人主觀感受，操作前皆會與你充分溝通確認。一經操作完畢，<strong>恕不接受以「不習慣、不喜歡」等主觀理由要求退費</strong>。</li>
-          <li>每個人的原生骨骼與肌肉走向皆不相同，無法達到 100% 的絕對對稱。<strong>完美主義者，預約前請務必謹慎評估</strong>。</li>
+          <li>每個人的原生骨骼與肌肉走向皆不相同，無法達到 100% 的絕對對稱。<strong>若有絕對對稱的考量，預約前請稍微評估一下喔。</strong></li>
         </ul>
       </div>
 
-      <div class="mann-section-title">其他注意事項</div>
+      <div class="mann-section-title">空間與行前注意事項</div>
       <div class="mann-card">
         <ul class="mann-list">
-          <li>工作室採<strong>全預約制</strong>，希望能為你提供最放鬆、完整的服務時光。</li>
-          <li>保持空間的靜謐與操作專注品質，目前暫<strong>不開放攜伴、孩童及寵物陪同</strong>，敬請見諒。</li>
-          <li>施作期間請順手將<strong>手機轉為靜音</strong>，安心閉眼休息。充足的休息能避免眼部肌肉頻繁跳動與身體移動，讓操作過程更順利、成品更完美。</li>
-          <li>若本身有眼部/唇部疾病、三個月內曾進行臉部手術，或為孕婦、蟹足腫、糖尿病體質，請在預約時主動告知。<strong>若自身體質產生不可預期的過敏反應，請盡速就醫，工作室恕不承擔醫療責任。</strong></li>
+          <li>工作室採全預約制。為了維持舒服放鬆的空間品質，目前暫<strong>不開放攜伴、孩童及寵物陪同</strong>，敬請見諒。</li>
+          <li>為確保操作安全，若近期曾進行臉部或眼部醫美手術、有眼唇部相關疾病，或為孕婦、特殊體質者，<strong>請於預約時主動告知</strong>。</li>
+          <li>施作期間請順手將<strong>手機轉為靜音</strong>，好好閉眼休息一下。充足的休息能避免肌肉頻繁跳動，讓操作過程更順暢，成品也會更完美。</li>
         </ul>
       </div>
 
       <div class="mann-section-title">日式美睫注意事項（行前準備）</div>
       <div class="mann-card">
         <ul class="mann-list">
-          <li>前來時<strong>請勿夾睫毛或刷睫毛膏</strong>，避免影響接點或專業產品作用。</li>
+          <li>預約當天<strong>請避免使用睫毛夾、睫毛膏與眼妝</strong>，以便維持最佳的嫁接效果。</li>
           <li>有配戴隱形眼鏡習慣的朋友，建議當天配戴一般透明款式即可。</li>
         </ul>
       </div>
@@ -673,7 +674,7 @@
       <div class="mann-section-title">定妝項目重要規範</div>
       <div class="mann-card">
         <ul class="mann-list">
-          <li><strong>免費補色期：</strong> 首次施作後，需間隔至少 1 個月讓皮膚修復。提供 <strong>3 個月內免費補色一次</strong>（逾期視同放棄，不再展延）。</li>
+          <li><strong>免費補色期：</strong> 首次施作後，需間隔至少 1 個月讓皮膚修復。提供 <strong>3 個月內免費補色一次</strong>（超過時間將恢復原價，請記得把握專屬的補色期喔）。</li>
         </ul>
 
         <div class="mann-divider"></div>
@@ -703,7 +704,7 @@
         <h3 class="mann-sub-title">關於睫毛保養升級（取消補睫）</h3>
         <ul class="mann-list">
           <li>維持睫毛根部健康、避免毛囊阻塞，並配合最新的「LED 光固」與「接睫後塑形」技術，因真毛長出後角度會改變，無法進行補接。</li>
-          <li><strong>全面取消局部補睫服務，一律採「溫和全卸除重接」</strong>。讓你每一次都能帶著最乾淨、完美的全新睫毛離開。</li>
+          <li><strong>為了維持每一次的完美與衛生，目前沒有提供局部補睫服務，皆採「溫和全卸除重接」</strong>。讓你每一次都能帶著最乾淨、完美的全新睫毛離開。</li>
         </ul>
 
         <div class="mann-divider"></div>
@@ -741,7 +742,7 @@
         <div class="mann-divider"></div>
         <h3 class="mann-sub-title">結痂脫落期照護 (Day 3-5)</h3>
         <ul class="mann-list">
-          <li>大約第 3-5 天開始，操作部位會自然形成薄痂並慢慢脫落。此時可能會伴隨輕微發癢，<strong>絕對不要用手去摳抓或硬撕結痂</strong>，以免造成顏色斑駁。</li>
+          <li>大約第 3-5 天開始，操作部位會自然形成薄痂並慢慢脫落。此時可能會伴隨輕微發癢，<strong>請盡量避免用手去摳抓或硬撕結痂</strong>，以免造成顏色斑駁。</li>
           <li>請依指示定時薄塗修護霜，保持肌膚微潤狀態，讓結痂自然脫落即可。</li>
         </ul>
 
@@ -779,7 +780,9 @@
         const targetId = this.getAttribute('data-target');
         document.getElementById(targetId).classList.add('active');
         
+        // 點擊後將被選中的標籤置中顯示 (適合手機滑動導覽列)
         this.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        // 畫面回到頂部
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
