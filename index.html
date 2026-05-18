@@ -63,7 +63,7 @@
     }
 
     .mann-header-title {
-      font-size: 21px; /* 放大比例 */
+      font-size: 21px;
       font-weight: 600;
       color: var(--text-main);
       letter-spacing: 0.15em;
@@ -71,7 +71,7 @@
     }
 
     .mann-header-subtitle {
-      font-size: 13px; /* 放大比例 */
+      font-size: 13px;
       color: var(--brand-primary);
       letter-spacing: 0.1em;
       font-weight: 500;
@@ -101,7 +101,7 @@
       text-align: center;
       padding: 14px 0;
       color: var(--text-muted);
-      font-size: 14px; /* 放大至 14px 基準 */
+      font-size: 14px;
       font-weight: 500;
       cursor: pointer;
       border-bottom: 2px solid transparent;
@@ -136,8 +136,6 @@
     }
 
     /* --- 排版系統：層級與間距 (14px 黃金基準) --- */
-    
-    /* 1. 區塊大標題 */
     .mann-section-title {
       font-size: 16px;
       font-weight: 600;
@@ -148,7 +146,6 @@
       line-height: 1.2;
     }
 
-    /* 2. 卡片容器 */
     .mann-card {
       background-color: var(--bg-card);
       border: 1px solid var(--border-light);
@@ -157,12 +154,10 @@
       margin-bottom: 16px;
     }
 
-    /* 3. 卡片內元素通用底部留白 */
     .mann-card > *:not(:last-child) {
       margin-bottom: 16px;
     }
 
-    /* 4. 卡片內小標題 */
     .mann-sub-title {
       font-size: 15px;
       font-weight: 600;
@@ -170,19 +165,17 @@
       margin-bottom: 12px !important; 
     }
 
-    /* 5. 一般內文 (14px) */
     .mann-card-desc {
       font-size: 14px;
       color: var(--text-sub);
     }
 
-    /* 6. 列表系統 */
     ul.mann-list {
       list-style: none;
     }
 
     ul.mann-list li {
-      font-size: 14px; /* 放大至 14px 基準 */
+      font-size: 14px;
       color: var(--text-sub);
       position: relative;
       padding-left: 16px;
@@ -208,14 +201,12 @@
       font-size: 15px;
     }
 
-    /* 7. 分隔線 */
     .mann-divider {
       border-top: 1px dashed var(--border-dashed);
       margin: 24px 0 !important; 
       height: 1px;
     }
 
-    /* --- 價目表專用排版 --- */
     .mann-price-list {
       display: flex;
       flex-direction: column;
@@ -242,7 +233,7 @@
     }
 
     .mann-price-name {
-      font-size: 15px; /* 放大比例 */
+      font-size: 15px;
       color: var(--text-main);
       font-weight: 500;
       flex: 1;
@@ -250,23 +241,22 @@
     }
 
     .mann-price-value {
-      font-size: 15px; /* 放大比例 */
+      font-size: 15px;
       color: var(--brand-primary);
       font-weight: 600;
       white-space: nowrap;
     }
 
     .mann-price-note {
-      font-size: 13px; /* 放大比例 */
+      font-size: 13px;
       color: var(--text-muted);
       margin-top: 4px;
       display: block;
     }
 
-    /* --- 輔助 UI 組件 --- */
     .mann-badge {
       display: inline-block;
-      font-size: 12px; /* 放大比例 */
+      font-size: 12px;
       color: var(--brand-primary);
       border: 1px solid var(--brand-primary);
       padding: 2px 6px;
@@ -284,7 +274,6 @@
       border: 1px solid var(--border-light);
     }
 
-    /* --- 底部浮動按鈕 --- */
     .mann-bottom-actions {
       position: fixed;
       bottom: 20px;
@@ -304,7 +293,7 @@
       justify-content: center;
       padding: 14px 0;
       border-radius: 4px;
-      font-size: 14px; /* 與內文統一 */
+      font-size: 14px;
       font-weight: 500;
       text-decoration: none;
       letter-spacing: 0.1em;
@@ -327,7 +316,6 @@
     .mann-action-btn:active {
       opacity: 0.8;
     }
-
   </style>
 </head>
 <body>
@@ -339,7 +327,6 @@
     <p class="mann-header-subtitle">漫恩美學</p>
   </header>
 
-  <!-- 導覽列：平均分配、韓系底線 -->
   <nav class="mann-tabs">
     <div class="mann-tab active" data-target="tab-notice">預約須知</div>
     <div class="mann-tab" data-target="tab-promo">優惠活動</div>
@@ -350,9 +337,7 @@
 
   <main class="mann-content">
     
-    <!-- ================= 分頁 1：預約須知 ================= -->
     <div id="tab-notice" class="mann-tab-pane active">
-      
       <div class="mann-section-title">預約定金與相關規定</div>
       <div class="mann-card">
         <div class="mann-card-desc">
@@ -404,12 +389,9 @@
           <li><strong>操作唇部者：</strong>預約前一週請加強唇部保濕，建議可厚敷凡士林，避免脫皮影響上色效果。</li>
         </ul>
       </div>
-
     </div>
 
-    <!-- ================= 分頁 2：優惠活動 ================= -->
     <div id="tab-promo" class="mann-tab-pane">
-      
       <div class="mann-section-title">漫恩專屬回饋</div>
       <div class="mann-card">
         <h3 class="mann-sub-title">常態互動優惠</h3>
@@ -444,66 +426,58 @@
           </p>
         </div>
       </div>
-
     </div>
 
-    <!-- ================= 分頁 3：美睫價目 ================= -->
     <div id="tab-lash" class="mann-tab-pane">
-      
       <div class="mann-section-title">漫恩三大技術升級</div>
       <div class="mann-card">
-        
         <div>
           <h3 class="mann-sub-title"><span class="mann-badge">全品項標配</span> 零等待期・鎖固精華</h3>
           <p class="mann-card-desc">全面升級日本頂級黑膠＋Super Lock 鎖固精華。接完即刻安全固化，回家馬上可正常洗臉。</p>
         </div>
-
         <div class="mann-divider"></div>
-
         <div>
           <h3 class="mann-sub-title"><span class="mann-badge">加購升級</span> 持久極致・LED 光固技術</h3>
           <p class="mann-card-desc">光固膠結構強韌，抗油抗汗有感升級。低敏低刺激，容易出油的膚質與孕婦皆能安心施作。</p>
         </div>
-
         <div class="mann-divider"></div>
-
         <div>
           <h3 class="mann-sub-title"><span class="mann-badge">加購升級</span> 眼神放大・接睫後塑形</h3>
           <p class="mann-card-desc">專為下垂睫毛設計！針對真假睫毛完美向上拉提，告別兩層分岔尷尬，自帶隱形放大片效果。</p>
         </div>
-
       </div>
 
       <div class="mann-section-title">日式美睫</div>
       <div class="mann-card">
-        <h3 class="mann-sub-title">訂製單根 / 輕柔多根系列</h3>
+        <h3 class="mann-sub-title">訂製單根｜輕柔多根系列</h3>
         <p class="mann-card-desc">
           全面升級：零負重感頂級軟毛 x 高階低敏低氣味黑膠<br>
-          ※ 現場可依眼型客製化：經典單根 / 輕柔多根 / 花叢仙子款，均不加價
+          ※ 款式提供：經典單根・輕柔多根・精緻微束<br>
+          ※ 質感毛色：質感霧黑・溫柔可可
         </p>
         
         <div class="mann-price-list">
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">100 根（清新裸妝）</span>
+              <span class="mann-price-name">100根｜清新裸妝</span>
               <span class="mann-price-value">$1,400</span>
             </div>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">120 根（自然有神） <span class="mann-badge">人氣</span></span>
+              <span class="mann-price-name">120根｜自然有神 <span class="mann-badge">人氣</span></span>
               <span class="mann-price-value">$1,600</span>
             </div>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">140 根（精緻微濃）</span>
+              <span class="mann-price-name">140根｜精緻微濃</span>
               <span class="mann-price-value">$1,800</span>
             </div>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">160 根（華麗眼線）</span>
+              <span class="mann-price-name">160根｜深邃眼線</span>
               <span class="mann-price-value">$2,000</span>
             </div>
           </div>
@@ -522,24 +496,24 @@
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">LED 光固技術</span>
+              <span class="mann-price-name">LED光固技術</span>
               <span class="mann-price-value">+$300</span>
             </div>
-            <span class="mann-price-note">抗油抗汗／低敏低刺激／持久度翻倍</span>
+            <span class="mann-price-note">抗油抗汗｜低敏低刺激｜持久度翻倍</span>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
               <span class="mann-price-name">接睫後塑形</span>
               <span class="mann-price-value">+$800</span>
             </div>
-            <span class="mann-price-note">真假睫毛向上拉提／告別原生毛下垂分層</span>
+            <span class="mann-price-note">真假睫毛向上拉提｜告別原生毛下垂分層</span>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name" style="font-weight: 600;">完美眼眸套餐</span>
+              <span class="mann-price-name" style="font-weight: 600;">完美眼眸套餐｜LED＋塑形</span>
               <span class="mann-price-value">+$1,000</span>
             </div>
-            <span class="mann-price-note">同日加購「LED＋塑形」，享現省 $100 限定優惠。</span>
+            <span class="mann-price-note">同日加購，享現省 $100 限定優惠。</span>
           </div>
         </div>
       </div>
@@ -559,14 +533,14 @@
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">下睫毛深層管理</span>
+              <span class="mann-price-name">下睫毛深層管理｜僅單做下睫毛</span>
               <span class="mann-price-value">$600</span>
             </div>
             <span class="mann-price-note">※ 與上睫同日加購 +$400</span>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">精緻野生眉（毛流矯正）</span>
+              <span class="mann-price-name">精緻野生眉｜毛流矯正</span>
               <span class="mann-price-value">$1,300</span>
             </div>
           </div>
@@ -578,25 +552,25 @@
         <div class="mann-price-list">
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">本店卸除（當日續接）</span>
+              <span class="mann-price-name">本店卸除｜當日續接或管理</span>
               <span class="mann-price-value">$200</span>
             </div>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">本店純卸除（無續接）</span>
+              <span class="mann-price-name">本店純卸除｜無續接</span>
               <span class="mann-price-value">$300</span>
             </div>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">他店卸除（當日續接）</span>
+              <span class="mann-price-name">他店卸除｜當日續接或管理</span>
               <span class="mann-price-value">$300</span>
             </div>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">他店純卸除（無續接）</span>
+              <span class="mann-price-name">他店純卸除｜無續接</span>
               <span class="mann-price-value">$500</span>
             </div>
             <span class="mann-price-note">※ 若為他店 LED 睫毛，視殘留情況酌收 $100~$200 特殊卸除費。</span>
@@ -626,12 +600,9 @@
           </div>
         </div>
       </div>
-
     </div>
 
-    <!-- ================= 分頁 4：定妝價目 ================= -->
     <div id="tab-makeup" class="mann-tab-pane">
-      
       <div class="mann-section-title">質感定妝系列</div>
       <div class="mann-card">
         <h3 class="mann-sub-title">半永久微妝美學</h3>
@@ -640,35 +611,32 @@
         <div class="mann-price-list">
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">微妝美瞳線</span>
+              <span class="mann-price-name">微妝美瞳線｜首次預約</span>
               <span class="mann-price-value">$6,800</span>
             </div>
+            <span class="mann-price-note">・3個月內免費補色｜首次預約專屬<br>・1年內回歸5折 $3,400 / 2年內回歸7折 $4,760</span>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">輕氧柔霧眉</span>
+              <span class="mann-price-name">輕氧柔霧眉｜首次預約</span>
               <span class="mann-price-value">$8,800</span>
             </div>
+            <span class="mann-price-note">・3個月內免費補色｜首次預約專屬<br>・1年內回歸5折 $4,400 / 2年內回歸7折 $6,160</span>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">水光透潤唇</span>
+              <span class="mann-price-name">水光透潤唇｜首次預約</span>
               <span class="mann-price-value">$11,800</span>
             </div>
+            <span class="mann-price-note">・3個月內免費補色｜首次預約專屬<br>・1年內回歸5折 $5,900 / 2年內回歸7折 $8,260</span>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">溫和眉色淡化（洗去老舊殘色）</span>
+              <span class="mann-price-name">溫和眉色淡化｜洗去老舊殘色</span>
               <span class="mann-price-value">$2,500 / 次</span>
             </div>
           </div>
         </div>
-
-        <div class="mann-divider"></div>
-        <p class="mann-price-note" style="margin-top: 0;">
-          ※ 紋繡定妝項目皆含：精緻臉型/眼型設計討論，與 3 個月內免費補色一次。<br>
-          ※ 眉色淡化除外
-        </p>
       </div>
 
       <div class="mann-section-title">定妝項目重要規範</div>
@@ -676,22 +644,18 @@
         <ul class="mann-list">
           <li><strong>免費補色期：</strong> 首次施作後，需間隔至少 1 個月讓皮膚修復。提供 <strong>3 個月內免費補色一次</strong>（超過時間將恢復原價，請記得把握專屬的補色期喔）。</li>
         </ul>
-
         <div class="mann-divider"></div>
         <h3 class="mann-sub-title">專屬回歸補色優惠</h3>
         <p class="mann-card-desc">漫恩的作品掉色後需要補色維護？</p>
         <ul class="mann-list">
-          <li><strong>1 年內回歸補色：</strong> 原價 5 折</li>
-          <li><strong>2 年內回歸補色：</strong> 原價 7 折</li>
+          <li><strong>1年內回歸補色：</strong> 原價 5 折</li>
+          <li><strong>2年內回歸補色：</strong> 原價 7 折</li>
           <li><strong>超過 2 年或他店作品：</strong> 視同重新施作，依原價計費</li>
         </ul>
       </div>
-
     </div>
 
-    <!-- ================= 分頁 5：保養指南 ================= -->
     <div id="tab-aftercare" class="mann-tab-pane">
-      
       <div class="mann-section-title">日式美睫</div>
       <div class="mann-card">
         <h3 class="mann-sub-title">全面升級：零等待期</h3>
@@ -699,14 +663,12 @@
           <li>工作室全面引進<strong>日本 Miss eye d'or 頂級 1 秒黑膠</strong>，並於嫁接後搭配使用同品牌<strong>獨家 Super Lock 鎖固精華</strong>，讓黑膠在接完當下即刻完成安全固化。<strong>回家後可馬上正常洗臉，不需等待 24 小時</strong>。</li>
           <li>為保護黑膠結構，洗臉時請避免使用蓮蓬頭強力直沖眼睛；<strong>24 小時內請先避開溫泉、烤箱或蒸氣室</strong>等極度高溫環境。</li>
         </ul>
-
         <div class="mann-divider"></div>
         <h3 class="mann-sub-title">關於睫毛保養升級（取消補睫）</h3>
         <ul class="mann-list">
           <li>維持睫毛根部健康、避免毛囊阻塞，並配合最新的「LED 光固」與「接睫後塑形」技術，因真毛長出後角度會改變，無法進行補接。</li>
           <li><strong>為了維持每一次的完美與衛生，目前沒有提供局部補睫服務，皆採「溫和全卸除重接」</strong>。讓你每一次都能帶著最乾淨、完美的全新睫毛離開。</li>
         </ul>
-
         <div class="mann-divider"></div>
         <h3 class="mann-sub-title">進階技術保養重點</h3>
         <ul class="mann-list">
@@ -722,7 +684,6 @@
           <li>做完管理後，<strong>24 小時內請盡量保持毛流乾燥</strong>，避免泡溫泉或進入蒸氣室，讓漂亮的捲度完美定型。</li>
           <li>雖然不接假毛，原生睫毛一樣需要呵護。建議每天早晚洗臉後，使用<strong>睫毛專用雨衣或滋養液</strong>順梳整理。不僅能維持精緻束感，更能深層滋養原生毛髮。</li>
         </ul>
-
         <div class="mann-divider"></div>
         <h3 class="mann-sub-title">日常卸妝與清潔</h3>
         <ul class="mann-list">
@@ -738,14 +699,12 @@
           <li><strong>前 3 天為關鍵期：</strong>盡量避免讓操作部位碰水。需清潔時，請使用生理食鹽水沾濕棉片輕擦拭即可。</li>
           <li>暫時避開游泳池、溫泉、三溫暖及激烈運動流汗，以防感染並幫助留色。</li>
         </ul>
-
         <div class="mann-divider"></div>
         <h3 class="mann-sub-title">結痂脫落期照護 (Day 3-5)</h3>
         <ul class="mann-list">
           <li>大約第 3-5 天開始，操作部位會自然形成薄痂並慢慢脫落。此時可能會伴隨輕微發癢，<strong>請盡量避免用手去摳抓或硬撕結痂</strong>，以免造成顏色斑駁。</li>
           <li>請依指示定時薄塗修護霜，保持肌膚微潤狀態，讓結痂自然脫落即可。</li>
         </ul>
-
         <div class="mann-divider"></div>
         <h3 class="mann-sub-title">留色與維持週期</h3>
         <ul class="mann-list">
@@ -753,12 +712,10 @@
           <li>隨時間慢慢淡化屬於正常現象。待顏色變淡後，可依當時喜好的風格再預約補色微調。</li>
         </ul>
       </div>
-
     </div>
 
   </main>
 
-  <!-- ================= 底部浮動按鈕 (極簡化版) ================= -->
   <div class="mann-bottom-actions">
     <a href="https://maps.app.goo.gl/pzPdsQbYmLPvvtoT7?g_st=ic" target="_blank" class="mann-action-btn mann-btn-map">工作室位置</a>
     <a href="https://lin.ee/RycxNGf" target="_blank" class="mann-action-btn mann-btn-line">LINE 預約</a>
@@ -780,9 +737,7 @@
         const targetId = this.getAttribute('data-target');
         document.getElementById(targetId).classList.add('active');
         
-        // 點擊後將被選中的標籤置中顯示 (適合手機滑動導覽列)
         this.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        // 畫面回到頂部
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
