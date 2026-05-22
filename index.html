@@ -3,9 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>漫恩美學 MANN STUDIO</title>
   
-  <!-- 引入 Google Fonts：只保留最乾淨的高級黑體，確保手機閱讀的無壓感 -->
+  <!-- SEO & 社群分享預覽 Meta 標籤 -->
+  <title>漫恩美學 MANN STUDIO | 專業日式美睫・質感半永久定妝</title>
+  <meta name="description" content="漫恩美學 MANN STUDIO - 專注於慢工細作的日式美睫與質感半永久定妝。提供細緻睫毛嫁接、眉睫管理與霧眉、美瞳線、潤色唇服務，由主理人親自為您客製專屬的輕透質感美學。">
+  
+  <!-- Open Graph / LINE / Facebook 分享預覽 -->
+  <meta property="og:title" content="漫恩美學 MANN STUDIO | 專業日式美睫・質感定妝">
+  <meta property="og:description" content="專注於細緻工藝與完美毛流。點擊查看最新優惠活動、預約須知、完整服務價目表與居家保養指南。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="漫恩美學 MANN STUDIO">
+  
+  <!-- 引入 Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,16 +22,16 @@
   <style>
     /* --- 核心色彩與變數系統 (更柔和的奶茶色調) --- */
     :root {
-      --bg-body: #F9F7F4;       /* 背景再稍微溫暖一點點 */
+      --bg-body: #F9F7F4;       
       --bg-card: #FFFFFF;
-      --brand-primary: #947E6D; /* 主色調稍微調柔和 */
-      --brand-light: #F4EFEB;   /* 標籤底色 */
+      --brand-primary: #947E6D; 
+      --brand-light: #F4EFEB;   
       
-      --text-main: #332A24;     /* 主標題 (不刺眼的深灰咖啡) */
-      --text-sub: #5C5148;      /* 內文 */
-      --text-muted: #8C7F74;    /* 備註 */
+      --text-main: #332A24;     
+      --text-sub: #5C5148;      
+      --text-muted: #8C7F74;    
       
-      --divider-color: rgba(148, 126, 109, 0.1); /* 極度微弱的分隔線 */
+      --divider-color: rgba(148, 126, 109, 0.08); /* 更柔和的分隔線 */
     }
 
     /* --- 基礎設定 & 全局 Reset --- */
@@ -42,10 +51,10 @@
       background-color: var(--bg-body);
       color: var(--text-main);
       font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      line-height: 1.8; /* 增加行高，讓文字呼吸 */
-      letter-spacing: 0.04em; /* 稍微拉開字距，增加清透感 */
+      line-height: 1.9; /* 增加行高，提升閱讀舒適度 */
+      letter-spacing: 0.05em; /* 稍微拉開字距，增加透亮感 */
       -webkit-font-smoothing: antialiased;
-      padding-bottom: 110px;
+      padding-bottom: 120px; /* 增加底部保留高度，避免被按鈕遮擋 */
     }
 
     /* 主容器 */
@@ -59,87 +68,71 @@
       position: relative;
     }
 
-    /* --- Header 區塊 --- */
+    /* --- Header 區塊（微調間距） --- */
     .mann-header {
-      padding: 24px 20px 16px;
+      padding: 40px 24px 20px; /* 增加上下留白，給予呼吸感 */
       text-align: center;
     }
 
     .mann-header-title {
-      font-size: 22px;
+      font-size: 23px;
       font-weight: 700;
       color: var(--text-main);
-      letter-spacing: 0.15em;
-      margin-bottom: 6px;
+      letter-spacing: 0.18em;
+      margin-bottom: 8px;
     }
 
     .mann-header-subtitle {
       font-size: 13px;
       color: var(--brand-primary);
-      letter-spacing: 0.2em;
+      letter-spacing: 0.25em;
       font-weight: 500;
       opacity: 0.8;
     }
 
-    /* --- 導覽列 (Tabs)：無框線、乾淨底線 --- */
+    /* --- 導覽列 (Tabs)：全新膠囊 Pill 設計，完全解決擁擠與換行問題 --- */
     .mann-tabs {
       display: flex;
       position: sticky;
       top: 0;
-      background-color: rgba(249, 247, 244, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background-color: rgba(249, 247, 244, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       z-index: 10;
-      overflow-x: auto;
-      scrollbar-width: none;
-      padding: 0 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.02); /* 淡淡的立體感 */
-    }
-    
-    .mann-tabs::-webkit-scrollbar {
-      display: none;
+      padding: 12px 16px; /* 增加留白 */
+      gap: 6px; /* 膠囊之間的細緻間距 */
+      border-bottom: 1px solid rgba(148, 126, 109, 0.04);
     }
     
     .mann-tab {
       flex: 1;
-      min-width: 72px;
       text-align: center;
-      padding: 16px 0;
+      padding: 8px 0; /* 舒適的高度 */
       color: var(--text-muted);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
       cursor: pointer;
       position: relative;
       white-space: nowrap;
-      transition: all 0.3s ease;
+      border-radius: 20px; /* 溫潤的圓角膠囊 */
+      transition: all 0.25s ease;
     }
 
     .mann-tab.active {
       color: var(--brand-primary);
+      background-color: var(--brand-light); /* 溫柔的奶茶淺色底 */
       font-weight: 600;
-    }
-
-    .mann-tab.active::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 24px;
-      height: 3px;
-      background-color: var(--brand-primary);
-      border-radius: 3px 3px 0 0;
     }
 
     /* --- 內容區塊 --- */
     .mann-content {
-      padding: 0 20px 40px;
+      padding: 12px 24px 48px; /* 保持適當兩側留白 */
       flex-grow: 1;
     }
 
     .mann-tab-pane {
       display: none;
-      animation: fadeIn 0.5s ease forwards;
+      animation: fadeIn 0.3s ease forwards; /* 0.3s 更加流暢靈敏 */
     }
 
     .mann-tab-pane.active {
@@ -147,11 +140,11 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
+      from { opacity: 0; transform: translateY(5px); } /* 5px 靈敏位移 */
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* --- 排版系統：極簡 2.0 --- */
+    /* --- 排版系統 --- */
     
     /* 1. 區塊大標題 (置中、優雅底線) */
     .mann-section-title {
@@ -159,8 +152,8 @@
       font-weight: 600;
       color: var(--text-main);
       text-align: center;
-      margin: 40px 0 20px 0;
-      letter-spacing: 0.1em;
+      margin: 40px 0 24px 0; /* 調整為更流暢的間距 */
+      letter-spacing: 0.12em;
     }
 
     .mann-section-title::after {
@@ -169,23 +162,23 @@
       width: 24px;
       height: 2px;
       background-color: var(--brand-primary);
-      margin: 10px auto 0;
+      margin: 12px auto 0;
       border-radius: 2px;
       opacity: 0.6;
     }
 
-    /* 2. 卡片容器 (無邊框、溫柔陰影、大圓角) */
+    /* 2. 卡片容器 (無邊框、溫柔陰影、大圓角、增加內縮放) */
     .mann-card {
       background-color: var(--bg-card);
-      border-radius: 16px; /* 更圓潤 */
-      padding: 28px 24px;
-      margin-bottom: 20px;
-      box-shadow: 0 8px 24px rgba(148, 126, 109, 0.06); /* 雲朵般的陰影 */
-      border: none; /* 拿掉生硬的邊框 */
+      border-radius: 18px; 
+      padding: 32px 24px; /* 增加內邊距，提供極佳呼吸感 */
+      margin-bottom: 24px; /* 增加卡片間距 */
+      box-shadow: 0 8px 24px rgba(148, 126, 109, 0.05); 
+      border: none; 
     }
 
     .mann-card > *:not(:last-child) {
-      margin-bottom: 16px;
+      margin-bottom: 20px; /* 增加內部元素間距 */
     }
 
     /* 3. 卡片內小標題 */
@@ -193,16 +186,17 @@
       font-size: 15px;
       font-weight: 600;
       color: var(--text-main);
-      margin-bottom: 10px !important; 
+      margin-bottom: 12px !important; 
     }
 
     /* 4. 一般內文 */
     .mann-card-desc {
       font-size: 14px;
       color: var(--text-sub);
+      line-height: 1.9;
     }
 
-    /* 5. 列表系統 (精緻小圓點) */
+    /* 5. 列表系統 */
     ul.mann-list {
       list-style: none;
     }
@@ -211,8 +205,9 @@
       font-size: 14px;
       color: var(--text-sub);
       position: relative;
-      padding-left: 18px;
-      margin-bottom: 12px;
+      padding-left: 20px;
+      margin-bottom: 16px; /* 增加每行項目間距，易於閱讀 */
+      line-height: 1.85;
     }
 
     ul.mann-list li:last-child {
@@ -228,7 +223,7 @@
       content: "";
       position: absolute;
       left: 0;
-      top: 10px; /* 對齊第一行文字高度 */
+      top: 11px; 
       width: 5px;
       height: 5px;
       background-color: var(--brand-primary);
@@ -239,15 +234,15 @@
     /* 6. 分隔線 (極度微弱) */
     .mann-divider {
       border-top: 1px solid var(--divider-color);
-      margin: 28px 0 !important; 
+      margin: 32px 0 !important; /* 增加分隔線上下間距 */
       height: 1px;
     }
 
-    /* --- 價目表專用排版 (拿掉框線，靠間距對齊) --- */
+    /* --- 價目表專用排版 --- */
     .mann-price-list {
       display: flex;
       flex-direction: column;
-      gap: 16px; /* 直接用 gap 拉開距離，不用 border */
+      gap: 18px; /* 增加價格列間距 */
     }
 
     .mann-price-row {
@@ -279,16 +274,17 @@
     .mann-price-note {
       font-size: 13px;
       color: var(--text-muted);
-      margin-top: 2px;
+      margin-top: 4px; /* 稍微拉開備註與標題距離 */
       display: block;
+      line-height: 1.8;
     }
 
-    /* --- 輔助 UI 組件 (柔和色塊標籤) --- */
+    /* --- 輔助 UI 組件 --- */
     .mann-badge {
       display: inline-block;
       font-size: 12px;
       color: var(--brand-primary);
-      background-color: var(--brand-light); /* 奶茶色底 */
+      background-color: var(--brand-light); 
       padding: 3px 8px;
       border-radius: 6px;
       margin-right: 8px;
@@ -298,22 +294,22 @@
     }
 
     .mann-note-box {
-      background-color: #FDFBFA; /* 淡淡的底色 */
-      padding: 16px 20px;
+      background-color: #FDFBFA; 
+      padding: 18px 20px; /* 增加內縮放 */
       border-radius: 12px;
       border: 1px solid var(--divider-color);
     }
 
-    /* --- 底部浮動按鈕 (更圓潤現代) --- */
+    /* --- 底部浮動按鈕 --- */
     .mann-bottom-actions {
       position: fixed;
-      bottom: 16px;
+      bottom: 20px; /* 稍微提升高度，視覺更輕盈 */
       left: 50%;
       transform: translateX(-50%);
-      width: calc(100% - 40px);
+      width: calc(100% - 48px); /* 保持適當留白 */
       max-width: 400px;
       display: flex;
-      gap: 10px;
+      gap: 12px;
       z-index: 100;
     }
 
@@ -322,15 +318,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 0;
-      border-radius: 20px; /* 膠囊形按鈕縮小 */
+      padding: 12px 0; /* 增加高度，更易點擊 */
+      border-radius: 24px; 
       font-size: 14px;
       font-weight: 600;
       text-decoration: none;
-      letter-spacing: 0.08em;
-      transition: opacity 0.3s ease;
+      letter-spacing: 0.1em;
+      transition: all 0.2s ease;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 6px 16px rgba(148, 126, 109, 0.15);
     }
 
     .mann-btn-map {
@@ -340,14 +336,14 @@
     }
 
     .mann-btn-line {
-      background-color: var(--text-main); /* 改用深色，質感大升級 */
+      background-color: var(--text-main); 
       color: var(--bg-card);
       border: 1px solid var(--text-main);
     }
 
     .mann-action-btn:active {
-      opacity: 0.8;
-      transform: scale(0.98);
+      opacity: 0.9;
+      transform: scale(0.97);
     }
   </style>
 </head>
@@ -361,133 +357,172 @@
   </header>
 
   <nav class="mann-tabs">
-    <div class="mann-tab active" data-target="tab-notice">預約須知</div>
+    <div class="mann-tab active" data-target="tab-booking-faq">預約 & FAQ</div>
     <div class="mann-tab" data-target="tab-promo">優惠活動</div>
-    <div class="mann-tab" data-target="tab-lash">美睫價目</div>
-    <div class="mann-tab" data-target="tab-makeup">定妝價目</div>
+    <div class="mann-tab" data-target="tab-price">服務價目</div>
     <div class="mann-tab" data-target="tab-aftercare">保養指南</div>
   </nav>
 
   <main class="mann-content">
     
-    <!-- 分頁 1：預約須知 -->
-    <div id="tab-notice" class="mann-tab-pane active">
-      <div class="mann-section-title">預約定金與相關規定</div>
+    <!-- 分頁 1：預約 & FAQ -->
+    <div id="tab-booking-faq" class="mann-tab-pane active">
+      <div class="mann-section-title">預約與訂金規範</div>
       <div class="mann-card">
         <div class="mann-card-desc">
-          為了讓每位客人都能享受最細緻且專業的服務品質，請在預約前留意以下規範：
+          為了提供您最細緻、專屬的服務品質，預約前請協助詳閱以下溫馨小守則：
         </div>
         <ul class="mann-list">
-          <li>為保留專屬時段，<strong>預約需於期限內完成定金匯款</strong>，才算預約成功。</li>
-          <li>因漫恩專注於慢工細作，每日能服務的時段有限。如需更改時間或取消，最晚請在<strong>預約日 3 天前</strong>提前告知。當日臨時取消或無故未到者，定金恕不退還並將列入黑名單。</li>
-          <li>為確保每位客人的隱私，並讓我能為你準備最乾淨的放鬆空間，目前不開放提早候位。請於預約時間<strong>準時抵達</strong>即可。</li>
-          <li>若遇突發狀況遲到，15 分鐘內<strong>將依剩餘時間調整施作項目與內容，並以原預約項目計價</strong>；遲到超過 15 分鐘將視同取消並沒收定金。</li>
+          <li>為了保留專屬時段，<strong>請於 24 小時內完成定金匯款</strong>，確認收到後才算預約成功喔！</li>
+          <li>漫恩專注於慢工細作，每天能服務的名額很有限。如果需要更改時間或取消，最晚請在<strong>預約日 3 天前</strong>主動告訴我。當日取消或未到，定金恕不退還或轉讓，並會婉拒日後預約，非常感謝您的體諒。</li>
+          <li>為維護隱私與環境整潔，目前沒有提供提早候位服務。請於預約時間<strong>準時抵達</strong>即可，讓我為您準備最舒服的放鬆空間❤️</li>
+          <li>如果有突發狀況需要遲到，請第一時間通知我！遲到 15 分鐘內，<strong>會依剩餘時間彈性調整施作內容，並以原預約項目計費</strong>；超過 15 分鐘將視同取消，定金恕不保留或退還。</li>
         </ul>
         <div class="mann-divider"></div>
-        <h3 class="mann-sub-title">當日支付說明</h3>
+        <h3 class="mann-sub-title">結帳支付說明</h3>
         <ul class="mann-list">
-          <li>服務完畢後，尾款可使用<strong>現金或轉帳支付</strong>。</li>
+          <li>服務完畢後，尾款可以使用<strong>現金或現場轉帳支付</strong>！</li>
         </ul>
       </div>
 
-      <div class="mann-section-title">售後保固與美感聲明</div>
+      <div class="mann-section-title">保固與美感說明</div>
       <div class="mann-card">
         <ul class="mann-list">
-          <li><strong>美睫保固：</strong>操作後 3 日內若有非人為因素之單眼大量異常脫落，請立即拍照回傳，將為你安排免費回補一次。因揉眼、卸妝不當等個人行為導致，恕不在保固範圍內。</li>
-          <li><strong>美感與退費：</strong>美感屬於個人主觀感受，操作前皆會與你充分溝通確認。一經操作完畢，<strong>恕不接受以「不習慣、不喜歡」等主觀理由要求退費</strong>。</li>
-          <li>每個人的原生骨骼與肌肉走向皆不相同，無法達到 100% 的絕對對稱。<strong>若有絕對對稱的考量，預約前請稍微評估一下唷。</strong></li>
+          <li><strong>美睫安心保固：</strong>施作後 3 日內若有非人為因素的大量異常脫落，請趕快拍照傳給我，我會免費安排回補一次！如果是揉眼睛、卸妝不當等個人習慣，就不在保固範圍內囉。</li>
+          <li><strong>專屬客製化美感：</strong>美感是主觀的，施作前我會與您充分溝通、確認喜好。施作完成後，<strong>恕不接受以「不習慣、不喜歡」等個人主觀理由要求退費</strong>。</li>
+          <li>每個人原生的骨骼走向與肌肉紋理都不同，無法做到完全對稱。<strong>如果對對稱性有極高要求的完美主義者，預約前請先評估看看喔😊</strong></li>
         </ul>
       </div>
 
-      <div class="mann-section-title">空間與行前注意事項</div>
+      <div class="mann-section-title">空間與行前叮嚀</div>
       <div class="mann-card">
         <ul class="mann-list">
-          <li>工作室採全預約制。為了維持舒服放鬆的空間品質，目前暫<strong>不開放攜伴、孩童及寵物陪同</strong>，敬請見諒。</li>
-          <li>為確保操作安全，若近期曾進行臉部或眼部醫美手術、有相關疾病，或為孕婦、特殊體質者，<strong>請於預約時主動告知</strong>。</li>
-          <li>施作期間請順手將<strong>手機轉為靜音</strong>，好好閉眼休息一下。充足的休息能避免肌肉頻繁跳動，讓成品更完美。</li>
+          <li>漫恩採全預約制。為了維持靜謐放鬆的環境，目前暫<strong>不開放攜伴、孩童或寵物陪同</strong>，謝謝大家一起維護高品質空間✨</li>
+          <li>為確保施作安全，若近期曾進行臉部相關程序、眼部或皮膚有特殊狀況，或是孕婦、敏感體質，<strong>預約時請一定要主動告訴我喔</strong>！</li>
+          <li>施作期間建議把<strong>手機轉為靜音</strong>，趁機好好閉眼休息一下。放鬆的眼部肌肉，能讓我把作品做得更完美！</li>
         </ul>
       </div>
 
-      <div class="mann-section-title">日式美睫注意事項</div>
+      <div class="mann-section-title">美睫行前準備</div>
       <div class="mann-card">
         <ul class="mann-list">
-          <li>預約當天<strong>請避免使用睫毛夾、睫毛膏與眼妝</strong>，維持素眼能讓嫁接效果更好。</li>
-          <li>有配戴隱形眼鏡習慣的朋友，建議當天配戴一般透明款式即可。</li>
+          <li>預約當天<strong>請素眼過來，避開眼妝、睫毛膏與睫毛夾</strong>，乾淨的睫毛底色能讓接睫效果更完美持久！</li>
+          <li>有戴隱形眼鏡習慣的話，建議當天配戴最舒適的一般透明款式即可。</li>
         </ul>
       </div>
 
-      <div class="mann-section-title">質感定妝注意事項</div>
+      <div class="mann-section-title">定妝行前準備</div>
       <div class="mann-card">
         <ul class="mann-list">
-          <li>預約前一週請暫停使用含酸類、美白成分之保養品，並盡量避免熬夜及飲酒。</li>
-          <li><strong>操作唇部者：</strong>預約前一週請加強唇部保濕，建議可厚敷凡士林，避免脫皮影響上色效果。</li>
+          <li>預約前一週請暫停使用含酸類、亮白成分的保養品，也請盡量避免熬夜跟喝酒，讓皮膚維持在最穩定的狀態✨</li>
+          <li><strong>操作潤色唇：</strong>預約前一週請加強唇部保濕，建議可以每天厚敷凡士林，避免脫皮影響上色效果！</li>
         </ul>
+      </div>
+
+      <!-- FAQ 直接整合在第一個主要分頁，大幅增加尋找便利性 -->
+      <div class="mann-section-title">常見問題 Q&A</div>
+      
+      <div class="mann-card">
+        <h3 class="mann-sub-title">Q: 第一次預約，我該如何選擇美睫項目？</h3>
+        <p class="mann-card-desc">
+          別擔心！如果不知道適合哪種項目，可以先預約一個基本項目。施作當天我會依據您的眼型、原生睫毛健康度、平常化妝習慣，與您進行一對一溝通，量身規劃最適合的設計😊
+        </p>
+      </div>
+
+      <div class="mann-card">
+        <h3 class="mann-sub-title">Q: 睫毛嫁接可以維持多久？多久需要回來整理？</h3>
+        <p class="mann-card-desc">
+          美睫維持時間約 4 到 6 週（因個人生活習慣及睫毛自然代謝週期而定）。如果追求完美的濃密與整齊度，建議 3 週內預約黃金限期回補；若超過 4 週，則建議預約「全卸重接」，這樣更能徹底做好深層清潔，維護毛囊與眼周健康。
+        </p>
+      </div>
+
+      <div class="mann-card">
+        <h3 class="mann-sub-title">Q: 「睫毛管理」與「接睫毛」有何不同？做完能馬上嫁接嗎？</h3>
+        <p class="mann-card-desc">
+          「睫毛管理」是物理性調整原生睫毛角度，並進行深層潤澤強韌髮絲，適合喜歡超自然、刷睫毛膏般捲翹感的朋友。而「接睫毛」則是黏貼人工睫毛來增加長度與濃密度。<br>
+          因為睫毛管理改變了毛流與毛鱗片角度，為了睫毛健康與接睫後的黏著度，<strong>施作完睫毛管理後，建議至少間隔 4 週以上再預約接睫毛。</strong>
+        </p>
+      </div>
+
+      <div class="mann-card">
+        <h3 class="mann-sub-title">Q: 半永久定妝（柔霧眉、美瞳線）操作完會變紅腫嗎？</h3>
+        <p class="mann-card-desc">
+          漫恩全程採用拋棄式無菌耗材與符合規範的安心進口色乳，手法非常細緻輕柔，只在皮膚表層進行溫和上色，不侵入深層。操作完當天非常自然，不用擔心經歷黑粗的過渡期，隔天也能正常出門上班唷！大約 3 到 5 天會有些微細小脫屑，只要做好居家保濕就沒問題了❤️
+        </p>
+      </div>
+
+      <div class="mann-card">
+        <h3 class="mann-sub-title">Q: 預約成功後若有突發狀況，可以更改時間或退定金嗎？</h3>
+        <p class="mann-card-desc">
+          為了提供最高規格的專屬服務，我每天服務的人數非常有限。如果臨時需要更改時間，<strong>最晚請在預約日 3 天前主動告訴我</strong>，定金可以協助保留改期一次（3天內取消則恕不退還或保留，感謝大家共同維護時段喔🥰）
+        </p>
       </div>
     </div>
 
     <!-- 分頁 2：優惠活動 -->
     <div id="tab-promo" class="mann-tab-pane">
-      <div class="mann-section-title">漫恩專屬回饋</div>
+      <div class="mann-section-title">漫恩獨家回饋計畫</div>
       <div class="mann-card">
-        <h3 class="mann-sub-title">常態互動優惠</h3>
+        <h3 class="mann-sub-title">心動分享小回饋</h3>
         <ul class="mann-list">
-          <li><strong>限動打卡分享：</strong> 回去後有拍美美的照片，歡迎於 IG 限動分享並標記工作室。為你記錄專屬折抵金，下次預約美睫/管理 <strong>現折 $50</strong>，定妝 <strong>現折 $200</strong>。</li>
-          <li><strong>好友推薦：</strong> 推薦朋友成功預約，朋友首次消費美睫/管理 <strong>現折 $100</strong>，定妝 <strong>現折 $500</strong>；推薦人的你，下次預約時也享有同等項目的專屬折抵金（美睫/管理折 $100、定妝折 $500）唷！</li>
+          <li><strong>IG 限動打卡：</strong> 歡迎在 IG 限動分享美美照並標記漫恩！我會為您記錄專屬折抵金，下次預約美睫/睫毛管理<strong>現折 $50</strong>、定妝項目<strong>現折 $200</strong>！</li>
+          <li><strong>好友推薦禮：</strong> 推薦好友成功預約，好友首次消費美睫/睫毛管理<strong>現折 $100</strong>、定妝<strong>現折 $500</strong>；下一次預約時，您也同享好友推薦折抵金（美睫/管理折 $100、定妝折 $500）！大家一起變漂亮💕</li>
         </ul>
 
         <div class="mann-divider"></div>
-        <h3 class="mann-sub-title">常客專屬回饋</h3>
-        <p class="mann-card-desc">習慣定期回來保養的朋友，為你準備了專屬優惠：</p>
+        <h3 class="mann-sub-title">常客專屬寵愛</h3>
+        <p class="mann-card-desc">習慣定期回來保養的朋友，為您準備了專屬優惠：</p>
         <ul class="mann-list">
-          <li><strong>美睫常客：</strong> 距離上次施作 4 週內（28天）回店重接，享<strong>本店卸除免費（現省 $200）</strong>的常客回饋。</li>
-          <li><strong>管理常客：</strong> 距離上次施作 6 週內（45天）回訪整理，總價 <strong>現折 $100</strong>。</li>
-          <li><strong>跨項體驗：</strong> 凡曾於工作室消費過的客人，首次跨項體驗美睫/管理 <strong>現折 $100</strong>，體驗定妝 <strong>現折 $300</strong>。</li>
+          <li><strong>美睫常客：</strong> 距離上次施作 4 週內（28天內）回店重接，享有<strong>本店卸除免費（直接省下 $200）</strong>的專屬回饋！</li>
+          <li><strong>管理常客：</strong> 距離上次施作 6 週內（45天內）回訪施作眉睫管理，結帳總價<strong>直接折抵 $100</strong>。</li>
+          <li><strong>跨項新體驗：</strong> 只要曾在漫恩消費過，首次體驗不同大項（美睫/眉睫管理）<strong>現折 $100</strong>，體驗定妝項目<strong>現折 $300</strong>。</li>
         </ul>
 
         <div class="mann-divider"></div>
-        <h3 class="mann-sub-title">壽星專屬生日禮</h3>
-        <p class="mann-card-desc">生日當月來找我變漂亮，出示證件即可享專屬祝福：</p>
+        <h3 class="mann-sub-title">專屬生日祝福</h3>
+        <p class="mann-card-desc">生日當月來找我變美麗，出示身分證明文件即可獲得專屬生日折扣：</p>
         <ul class="mann-list">
-          <li><strong>美睫 / 眉睫管理：</strong> 總價 <strong>現折 $100</strong></li>
-          <li><strong>定妝項目：</strong> 總價 <strong>現折 $500</strong></li>
+          <li><strong>美睫 / 眉睫管理：</strong> 結帳總價<strong>現折 $100</strong></li>
+          <li><strong>半永久定妝：</strong> 結帳總價<strong>現折 $500</strong></li>
         </ul>
 
         <div class="mann-note-box" style="margin-top: 24px;">
-          <h3 class="mann-sub-title">活動小叮嚀</h3>
-          <p class="mann-card-desc">
-            ※ 限動打卡與好友推薦折抵金<strong>視同現金</strong>，可與常客回饋、生日禮及跨項體驗<strong>合併使用</strong>，且無使用期限。<br>
-            ※ 生日專屬生日禮與跨項體驗折扣<strong>屬於漫恩主動贈與福利，兩者不可合併累折</strong>，若同時符合將於結帳時擇優折抵單項最高金額。
+          <h3 class="mann-sub-title">💡 貼心小提醒</h3>
+          <p class="mann-card-desc" style="line-height: 2.0;">
+            ※ 限動打卡與好友推薦折抵金<strong>等同現金</strong>，可以與常客回饋、生日禮及跨項體驗<strong>合併使用</strong>，且沒有使用期限。<br>
+            ※ 生日好禮與跨項體驗折扣，為漫恩贈與您的專屬福利，<strong>兩者不可合併累計折抵</strong>，若同時符合會自動協助擇優選擇最高折扣❤️<br>
+            ※ 漫恩美學保有活動最終解釋、修改、調整及終止之權利唷😊🫶🏻
           </p>
         </div>
       </div>
     </div>
 
-    <!-- 分頁 3：美睫價目 -->
-    <div id="tab-lash" class="mann-tab-pane">
-      <div class="mann-section-title">漫恩三大技術升級</div>
+    <!-- 分頁 3：服務價目 -->
+    <div id="tab-price" class="mann-tab-pane">
+      <div class="mann-section-title">漫恩獨家三大技術升級</div>
       <div class="mann-card">
         <div>
           <h3 class="mann-sub-title"><span class="mann-badge">全項標配</span>零等待期鎖固精華</h3>
-          <p class="mann-card-desc">升級日本頂級黑膠與鎖固精華。接完當下即刻安全固化，回家馬上就能正常洗臉囉！</p>
+          <p class="mann-card-desc">全面標配日本進口優質黑膠與快速鎖固配方，嫁接完當下即刻安全固化，回家可以立刻洗臉，不用再辛苦等 24 小時囉！</p>
         </div>
         <div class="mann-divider"></div>
         <div>
           <h3 class="mann-sub-title"><span class="mann-badge">加購升級</span>持久極致的LED光固</h3>
-          <p class="mann-card-desc">光固膠結構強韌，抗油抗汗有感升級。低敏不刺激，讓容易出油的膚質與孕婦都能安心施作。</p>
+          <p class="mann-card-desc">光固膠結構柔韌、抗油抗汗全面提升，而且低敏溫和，容易出油的膚質、敏感肌跟孕婦都可以安心選擇！</p>
         </div>
         <div class="mann-divider"></div>
         <div>
           <h3 class="mann-sub-title"><span class="mann-badge">加購升級</span>嫁接後塑形</h3>
-          <p class="mann-card-desc">專為下垂睫毛設計！將真假睫毛完美向上拉提，告別兩層分岔尷尬，自帶隱形放大片效果。</p>
+          <p class="mann-card-desc">專為下垂與雜亂毛流設計！將真假睫毛完美向上拉提與定型，告別兩層分岔的尷尬，自帶自然的隱形放大片效果。</p>
         </div>
       </div>
 
-      <div class="mann-section-title">日式美睫</div>
+      <div class="mann-section-title">日式美睫訂製款</div>
       <div class="mann-card">
         <h3 class="mann-sub-title">睫毛嫁接訂製系列</h3>
         <p class="mann-card-desc" style="margin-bottom: 24px;">
-          全面升級零負重感的頂級軟毛。<br>
-          為你準備了質感霧黑與溫柔可可兩種毛色。喜歡單根、多根還是精緻束感，都可以現場和我討論哦！
+          全面升級極致輕盈無重力的頂級柔軟毛。<br>
+          提供質感霧黑、溫柔可可兩款經典色。不論喜歡單根自然、蓬鬆多根還是精緻漫畫束感，都可以現場跟我一對一討論唷！
         </p>
         
         <div class="mann-price-list">
@@ -519,9 +554,9 @@
 
         <div class="mann-divider"></div>
         
-        <h3 class="mann-sub-title">黃金限期回補方案</h3>
+        <h3 class="mann-sub-title">黃金極限回補方案</h3>
         <p class="mann-card-desc" style="margin-bottom: 20px;">
-          專為追求完美密度的你設計。在毛髮健康代謝週期內，提供貼心局部回補服務：
+          專為想要隨時維持精緻密度的朋友設計。在毛髮健康代謝週期內，提供貼心細緻的局部回補服務：
         </p>
         <div class="mann-price-list">
           <div class="mann-price-row">
@@ -529,59 +564,60 @@
               <span class="mann-price-name">3 週內（21天內）回店補睫</span>
               <span class="mann-price-value">原項目 85 折</span>
             </div>
-            <span class="mann-price-note">※ 補睫的黃金極限期。超過 21 天或現場殘留量低於 40% 需以全卸重接計價唷。</span>
+            <span class="mann-price-note">※ 補睫最佳黃金期，若超過 21 天或現場睫毛殘留量低於 40%，會建議以全新卸除重新嫁接計費，才能維持最棒的整齊感唷！</span>
           </div>
         </div>
         
         <div class="mann-note-box" style="margin-top: 16px; padding: 12px 16px;">
           <span class="mann-price-note" style="margin-top: 0; line-height: 2.0;">
-            ※ 補睫費用僅適用於上睫毛項目，且費用已包含溫和整理與微卸除歪斜睫毛，無須另外支付卸除費。<br>
-            ※ 若前次施作有搭配 LED 光固，補睫時整筆消費（睫毛與光固項目）同享 85 折優惠，以維持最佳的持久度與黏合品質。<br>
-            * 下睫毛因生長代謝較快，回店時均採全新嫁接施作，無提供局部回補服務唷。
+            ✨ <strong>貼心回補細則：</strong><br>
+            ※ 回補優惠僅適用於上睫毛項目。回補費用已包含溫和清理與微卸除歪斜毛流，不需要另外支付卸睫費。<br>
+            * 若前次有搭配 LED 光固，回補時整筆消費（美睫與 LED 加購項目）同享 85 折，維持完美的融合品質。<br>
+            ※ 下睫毛生長代謝較快，回店一律採重新嫁接施作，沒有提供局部回補服務。
           </span>
         </div>
 
         <div class="mann-divider"></div>
 
-        <h3 class="mann-sub-title">進階加購升級</h3>
+        <h3 class="mann-sub-title">進階美麗加購升級</h3>
         <div class="mann-price-list">
           <div class="mann-price-row">
             <div class="mann-price-header">
               <span class="mann-price-name">LED 光固技術</span>
               <span class="mann-price-value">+$300</span>
             </div>
-            <span class="mann-price-note">※ 抗油抗汗、低敏不刺激，讓持久度有感翻倍。</span>
+            <span class="mann-price-note">※ 抗油防水力強，性質溫和，讓維持度更有感！</span>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
               <span class="mann-price-name">嫁接後塑形</span>
               <span class="mann-price-value">+$1,000</span>
             </div>
-            <span class="mann-price-note">※ 將真假睫毛完美向上拉提，告別下垂分層的困擾。效果可維持 4 至 6 週。</span>
+            <span class="mann-price-note">※ 將下垂毛流與假睫毛完美向上拉提與定型，維持度約 4-6 週，告別雙層分岔尷尬！</span>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
               <span class="mann-price-name" style="font-weight: 500;">精緻升級組合 (LED＋塑形)</span>
               <span class="mann-price-value">+$1,000</span>
             </div>
-            <span class="mann-price-note">※ 同日加購兩項升級，享限定組合優惠。</span>
+            <span class="mann-price-note">※ 同日施作兩項熱門技術升級，享限定極致優惠。</span>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
               <span class="mann-price-name">下睫毛嫁接</span>
               <span class="mann-price-value">+$500</span>
             </div>
-            <span class="mann-price-note">※ 上下睫毛完美呼應，讓雙眼放大的效果加倍。</span>
+            <span class="mann-price-note">※ 上下呼應，打造洋娃娃般的雙倍放大效果。</span>
           </div>
         </div>
       </div>
 
-      <div class="mann-section-title">眉睫管理</div>
+      <div class="mann-section-title">眉睫健康管理系列</div>
       <div class="mann-card">
         <h3 class="mann-sub-title">自然毛流重塑</h3>
         <p class="mann-card-desc" style="margin-bottom: 24px;">
-          使用專屬技術溫和校正原生毛流方向。<br>
-          操作全程都會搭配潤黑修護精華，為你的毛髮做深層保養。
+          使用專屬溫和技術調整原生毛髮方向與捲翹度。<br>
+          操作全程搭配高濃度修護精華，為原生毛流做好保濕與深層養護✨
         </p>
         
         <div class="mann-price-list">
@@ -590,26 +626,26 @@
               <span class="mann-price-name">睫毛管理－上睫毛</span>
               <span class="mann-price-value">$1,500</span>
             </div>
-            <span class="mann-price-note">※ 捲翹與修護定型效果可維持 6 至 8 週。若眼上有嫁接睫毛，預約時需一併勾選卸除項目哦。</span>
+            <span class="mann-price-note">※ 捲翹修護效果約維持 6-8 週。若眼上有殘留嫁接睫毛，預約時要記得勾選卸除項目喔！</span>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
               <span class="mann-price-name">睫毛管理－下睫毛</span>
               <span class="mann-price-value">$500</span>
             </div>
-            <span class="mann-price-note">※ 效果可維持 6 至 8 週，溫和向下重塑眼睫毛流。</span>
+            <span class="mann-price-note">※ 效果維持 6-8 週，溫和向下重塑眼睫毛方向，讓雙眼更清透。</span>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
               <span class="mann-price-name">野生眉</span>
               <span class="mann-price-value">$1,300</span>
             </div>
-            <span class="mann-price-note">※ 矯正毛流效果可維持 4 至 6 週，輕鬆刷出豐盈眉流感。</span>
+            <span class="mann-price-note">※ 矯正倒伏毛流，維持 4-6 週。隨手一刷就能擁有野生澎鬆的精緻眉型！</span>
           </div>
         </div>
       </div>
 
-      <div class="mann-section-title">專業睫毛卸除</div>
+      <div class="mann-section-title">專業睫毛溫卸系列</div>
       <div class="mann-card">
         <div class="mann-price-list">
           <div class="mann-price-row">
@@ -617,19 +653,19 @@
               <span class="mann-price-name">本店卸除</span>
               <span class="mann-price-value">$200</span>
             </div>
-            <span class="mann-price-note">※ 四週內回店享有免卸除費優惠。</span>
+            <span class="mann-price-note">※ 回店消費美睫重接，4 週內（28天內）回訪享有免卸除費。</span>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
               <span class="mann-price-name">他店卸除</span>
               <span class="mann-price-value">$300</span>
             </div>
-            <span class="mann-price-note">※ 若為他店 LED 睫毛，將視殘留情況酌收 $100~$200 特殊卸除費。</span>
+            <span class="mann-price-note">※ 若為他店 LED 特殊固化膠或殘留量極大，將依現場情況酌收 $100-$200 專業處理費。</span>
           </div>
         </div>
       </div>
 
-      <div class="mann-section-title">專業居家保養</div>
+      <div class="mann-section-title">專業居家沙龍保養</div>
       <div class="mann-card">
         <div class="mann-price-list">
           <div class="mann-price-row">
@@ -637,26 +673,24 @@
               <span class="mann-price-name">定型防護睫毛雨衣</span>
               <span class="mann-price-value">$620</span>
             </div>
-            <span class="mann-price-note">※ 有效隔離油汗與防潑水，接睫後必備的定型法寶。</span>
+            <span class="mann-price-note">※ 隔離油脂與汗水，接睫後的防護與定型法寶！</span>
           </div>
           <div class="mann-price-row">
             <div class="mann-price-header">
               <span class="mann-price-name">深層賦活睫毛滋養液</span>
               <span class="mann-price-value">$950</span>
             </div>
-            <span class="mann-price-note">※ 針對原生毛囊深層滋養，非常適合眉睫管理與日常保養。</span>
+            <span class="mann-price-note">※ 深度滋養強韌睫毛根部，預防斷裂，眉睫管理保養與日常護理必備！</span>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- 分頁 4：定妝價目 -->
-    <div id="tab-makeup" class="mann-tab-pane">
-      <div class="mann-section-title">半永久微妝美學</div>
+      <!-- 定妝價目併入此分頁，形成完美的「價目大總匯」 -->
+      <div class="mann-section-title">半永久溫潤美學</div>
       <div class="mann-card">
         <p class="mann-card-desc" style="margin-bottom: 24px;">
-          全程使用拋棄式無菌耗材與頂級色乳。<br>
-          首次預約的朋友，皆享有 3 個月內免費補色一次的專屬權益哦。
+          全程使用拋棄式無菌耗材與符合規範之優質進口安全色乳。<br>
+          首次預約，均享有 3 個月內免費微調與補色保養的專屬權益！
         </p>
         
         <div class="mann-price-list">
@@ -681,15 +715,15 @@
         </div>
       </div>
 
-      <div class="mann-section-title">老客專屬年度補色</div>
+      <div class="mann-section-title">漫恩好友專屬年度溫潤補色</div>
       <div class="mann-card">
-        <h3 class="mann-sub-title">3 個月內的免費微調</h3>
-        <p class="mann-card-desc">首次施作後需間隔至少 1 個月讓皮膚修復，這是專為首次預約客人準備的補色微調。請記得把握時間，超過 3 個月將恢復原價計算哦。</p>
+        <h3 class="mann-sub-title">3 個月內貼心免費微調</h3>
+        <p class="mann-card-desc">首次施作後，需給肌膚約 1 個月修護期。這是專為首次在漫恩操作所提供的免費微調服務，記得要提前跟我約好時間，超過 3 個月就會恢復原價❤️</p>
         
         <div class="mann-divider"></div>
         
-        <h3 class="mann-sub-title">專屬年度補色優惠</h3>
-        <p class="mann-card-desc" style="margin-bottom: 20px;">當漫恩的作品慢慢掉色後，為你準備了專屬的年度續色折扣：</p>
+        <h3 class="mann-sub-title">漫恩好友年度補色特惠價</h3>
+        <p class="mann-card-desc" style="margin-bottom: 20px;">當定妝隨著時間與代謝自然轉淡後，我特別準備了年度補色回饋折扣：</p>
         
         <div class="mann-price-list">
           <div class="mann-price-row">
@@ -707,7 +741,10 @@
         </div>
         
         <div class="mann-note-box" style="margin-top: 24px; padding: 12px 16px;">
-          <span class="mann-price-note">※ 年度補色為單次操作優惠，不包含免費補色期。優惠期限以最後一次施作日為起算基準。超過 2 年或為他店作品，將視同重新施作依原價計費唷。</span>
+          <span class="mann-price-note">
+            💡 <strong>年度補色叮嚀：</strong><br>
+            ※ 年度優惠為單次施作特惠價，不含後續免費補色期。時間以最後一次操作日開始起算。若超過 2 年或為他店作品，將以重新施作原價計費。
+          </span>
         </div>
       </div>
 
@@ -716,88 +753,88 @@
         <div class="mann-price-list">
           <div class="mann-price-row">
             <div class="mann-price-header">
-              <span class="mann-price-name">無創淡色 (溫和淡化殘留眉色)</span>
+              <span class="mann-price-name">漸進式溫和淡色 (溫和調整殘留眉色)</span>
               <span class="mann-price-value">$2,500 / 次</span>
             </div>
-            <span class="mann-price-note">※ 所需次數將依個人殘色狀況評估，採單次計費。</span>
+            <span class="mann-price-note">※ 淡色次數會依現場殘色厚度與色素狀況進行客製評估，採單次計費。</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 分頁 5：保養指南 -->
+    <!-- 分頁 4：保養指南 -->
     <div id="tab-aftercare" class="mann-tab-pane">
-      <div class="mann-section-title">日式美睫保養指南</div>
+      <div class="mann-section-title">日式美睫居家指南</div>
       <div class="mann-card">
-        <h3 class="mann-sub-title">零等待期的洗臉照護</h3>
+        <h3 class="mann-sub-title">接睫後洗臉超輕鬆</h3>
         <ul class="mann-list">
-          <li>引進日本頂級黑膠與鎖固精華，讓黑膠在接完當下即刻完成固化。回家後可馬上正常洗臉，不用再辛苦等待 24 小時囉！</li>
-          <li>洗臉時請避免使用蓮蓬頭強力直沖眼睛；24 小時內請先避開溫泉、烤箱或蒸氣室等高溫環境，保護黑膠結構。</li>
+          <li>我特別引進日本頂級黑膠與鎖固技術，接完睫毛當下膠水已完全安全固化，回家後可以立刻洗臉，完全不用再忍受 24 小時不能洗臉的困擾囉！</li>
+          <li>洗臉時請用潑水方式，避免蓮蓬頭直沖眼睛；24 小時內請先避開三溫暖、溫泉、烤箱，好好保護黑膠的黏著結構。</li>
         </ul>
         <div class="mann-divider"></div>
-        <h3 class="mann-sub-title">局部回補與整理守則</h3>
+        <h3 class="mann-sub-title">回補整理的精緻守則</h3>
         <ul class="mann-list">
-          <li><strong>回補基本觀念</strong><br>
-            漫恩提供 3 週內（21天內）的局部補睫服務。回補時，我會先幫你溫和清掉歪斜的舊睫毛，再補接上全新的睫毛，幫妳省去重新卸除的時間。</li>
-          <li><strong>回補時的升級項目調整</strong><br>
-            ・LED 光固：回補時同享 85 折（一併用 LED 專用膠施作、整筆結帳喔）。<br>
-            ・下睫毛：因代謝速度較快，回店一律採「全新嫁接」，無提供局部回補。<br>
-            ・嫁接後塑形：捲翹效果可維持 4 至 6 週，回補時無須重複操作。</li>
-          <li><strong>健康美睫守則：回補以一次為限</strong><br>
-            下一次整理時請預約「全卸除重接」。雖然每次施作我皆會為你進行深層美睫 Spa 清潔，但日常居家保養中，彩妝、皮脂與灰塵難免會微量累積在舊有黑膠縫隙裡。定期全卸除，才能徹底潔淨睫毛根部、讓毛囊健康呼吸，同時也能重新校正因生長週期而歪斜的毛流，維持最漂亮、勻稱的設計美感。</li>
+          <li><strong>回補觀念大解析：</strong> 漫恩為想要長效維持濃密感的朋友提供 3 週內（21天內）的局部補睫服務。回補時我會細心整理、修整掉歪斜的舊毛，再補上漂亮新毛，省去整眼卸除重接的時間！</li>
+          <li><strong>回補時的升級調整：</strong><br>
+            ・LED 光固：回補時同享原項目 85 折優惠（一併使用光固施作喔）。<br>
+            ・下睫毛：因代謝速度快，回訪一律是全新施作，沒有單獨局部回補服務。<br>
+            ・嫁接後塑形：捲度能維持約 4-6 週，回補時通常不需重複操作喔。</li>
+          <li><strong>健康美睫守則：回補建議以一次為限！</strong><br>
+            回補一次後，下次整理請一定要預約「全卸除重接」唷！雖然每次操作我都會做深層睫毛 SPA，但日常生活中的皮脂、灰塵或彩妝還是會微量殘留在舊有膠水縫隙。定期全卸重接，才能讓睫毛根部大口呼吸、維持毛髮健康，同時也能重新調整歪斜的毛流，展現最清透、勻稱的訂製設計美感✨</li>
         </ul>
         <div class="mann-divider"></div>
-        <h3 class="mann-sub-title">進階技術保養重點</h3>
+        <h3 class="mann-sub-title">熱門加購保養重點</h3>
         <ul class="mann-list">
-          <li>LED 光固技術：光固膠結構強韌，遇到容易出油的膚質也不易脫落。日常清潔時仍建議避開蓮蓬頭強力直沖哦。</li>
-          <li>嫁接後塑形：為了維持漂亮的向上捲度，建議每天早晚洗臉後，搭配睫毛專用的定型液或雨衣順梳整理，束感會維持得更完美。</li>
+          <li>LED 光固：結構超級強韌，即便肌膚容易出油也不易脫落！但洗臉時還是要溫柔對待，避免蓮蓬頭強力直沖眼睛。</li>
+          <li>嫁接後塑形：為維持朝氣挺立的捲翘角度，建議每天早晚洗完臉壓乾水分後，用定型雨衣順著毛流梳理，漫畫般的束感就會維持得超完美！</li>
         </ul>
       </div>
 
-      <div class="mann-section-title">眉睫管理保養指南</div>
+      <div class="mann-section-title">眉睫管理居家指南</div>
       <div class="mann-card">
-        <h3 class="mann-sub-title">操作後定型與保養</h3>
+        <h3 class="mann-sub-title">完美毛流定型法寶</h3>
         <ul class="mann-list">
-          <li>做完管理後，24 小時內請盡量保持毛流乾燥，避免泡溫泉或進入蒸氣室，讓漂亮的捲度與毛流定型。</li>
-          <li>維持時效說明：上睫毛與下睫毛管理效果約可維持 6 至 8 週；野生眉毛流矯正效果約可維持 4 至 6 週（依每個人原生毛髮的生長代謝週期而定）。</li>
-          <li>建議每天早晚洗臉後，使用睫毛專用雨衣或滋養液順梳整理，漂亮的毛流與捲度將維持得更完美喔。</li>
+          <li>施作管理後，24 小時內請盡量維持毛髮乾燥，先避開泡溫泉或烤箱蒸氣，讓漂亮的立體捲度與眉流完美定型。</li>
+          <li>維持時效：上/下睫毛管理效果約維持 6-8 週；野生眉毛流矯正約 4-6 週（依原生毛髮的天然代謝週期而定，每位顧客會有些微差異）。</li>
+          <li>建議每天早晚洗臉後，順手用小睫毛刷搭配雨衣或滋養精華液順向整理，美麗的毛流就能維持得又亮又翹！</li>
         </ul>
         <div class="mann-divider"></div>
-        <h3 class="mann-sub-title">睫毛管理就是角蛋白嗎？</h3>
+        <h3 class="mann-sub-title">解密：睫毛管理跟傳統角蛋白有什麼不同？</h3>
         <ul class="mann-list">
-          <li>兩者視覺效果相似，但對真睫毛的溫和度與保養規格大大升級。</li>
-          <li>傳統角蛋白美睫本質上偏向傳統冷燙，藥劑控制不好容易使睫毛毛糙受損。而漫恩的睫毛管理是全新一代的日式溫和毛髮修復技術。</li>
-          <li>我全程採用符合合法化妝品規範的修護配方，在溫和微調真睫毛向上提升弧度的同時，同步將高濃度角蛋白、膠原蛋白與滋養精華導入毛鱗片深層。</li>
-          <li>這不僅能達到與傳統角蛋白同樣立體、精緻的定型效果，更能在過程中強韌原生真毛、預防毛髮斷裂，是越做睫毛越健康的頂級毛流養護。</li>
+          <li>雖然視覺效果都很立體亮眼，但漫恩對真睫毛的「溫和保護」與「保養規格」可是大有不同唷！</li>
+          <li>傳統角蛋白本質上偏向傳統美睫冷燙，如果操作溫度或時間掌控不好，睫毛容易受損變得毛糙。而漫恩的「日式睫毛管理」是全新一代的日式溫和毛髮物理調整技術。</li>
+          <li>我全程採用符合化粧品衛生安全管理規範的溫和修護精華。在調整睫毛向上提拉弧度的同時，同步將高濃度植物性膠原、角蛋白及滋養精華導入髮絲。不僅效果立體精緻，還能強韌、預防斷裂，是越做睫毛越健康的頂級毛流護理❤️</li>
         </ul>
         <div class="mann-divider"></div>
-        <h3 class="mann-sub-title">日常卸妝與清潔</h3>
+        <h3 class="mann-sub-title">日常溫和清潔方式</h3>
         <ul class="mann-list">
-          <li>平常可以正常化妝與使用睫毛膏。卸妝時動作輕柔，順著毛髮生長方向卸除即可。</li>
-          <li>洗完臉後，用面紙輕輕壓乾水份，並用小刷子將毛流梳理整齊。</li>
+          <li>平常可以正常化妝、刷睫毛膏唷！卸妝時請溫柔對待，順著毛髮生長方向輕柔卸除即可。</li>
+          <li>洗臉後，用洗臉巾或面紙輕壓乾水分，再用睫毛小刷子順向刷整齊就大功告成啦！</li>
         </ul>
       </div>
 
-      <div class="mann-section-title">質感定妝保養指南</div>
+      <!-- 更新為最新、符合科學與醫學邏輯的主動潔淨照護方式 -->
+      <div class="mann-section-title">質感半永久定妝居家指南</div>
       <div class="mann-card">
-        <h3 class="mann-sub-title">質感定妝居家保養 (Day 1-3)</h3>
+        <h3 class="mann-sub-title">定妝後潔淨修護守則 (Day 1-3)</h3>
         <ul class="mann-list">
-          <li>前 3 天請避免大量碰水。清潔時，請使用乾淨棉片沾生理食鹽水，輕輕壓拭清潔。</li>
-          <li>暫時避開游泳池、溫泉、三溫暖及激烈運動流汗，以防影響留色均勻。</li>
-          <li>保養品請避開操作部位，並定時薄塗潤澤霜維持肌膚滋潤。</li>
+          <li><strong>重視溫柔清潔：</strong>操作後當天即可正常洗臉！請用常溫乾淨的水輕柔輕潑清潔操作部位（亦可搭配極溫和不含酸類之潔膚乳）。適度潔淨能輕柔帶走皮膚表層的分泌物與多餘油脂，防範產生厚重硬痂，是呈現薄透、精緻定妝留色的最關鍵步驟✨</li>
+          <li><strong>保持創部乾爽：</strong>洗臉清潔後，請立即用乾淨面紙或一次性洗臉巾「輕輕按壓」吸乾表面水分。</li>
+          <li><strong>水潤保濕不中斷：</strong>一般保養品（特別是含果酸、水楊酸、美白亮白成分）請先避開操作部位；吸乾水分後，請定時薄薄擦上我準備的專用潤澤產品，維持操作處的水嫩滋潤。</li>
+          <li><strong>活動避開提醒：</strong>一週內請先避免前往游泳池、高溫溫泉、蒸氣三溫暖，並避開大量流汗的激烈運動，讓精緻顏色完美附著。</li>
         </ul>
         <div class="mann-divider"></div>
-        <h3 class="mann-sub-title">表層代謝期 (Day 3-5)</h3>
+        <h3 class="mann-sub-title">自然微屑代謝期 (Day 3-5)</h3>
         <ul class="mann-list">
-          <li>大約第 3 到 5 天開始，操作部位表層會自然形成薄薄的微屑並慢慢脫落。</li>
-          <li>這幾天若有輕微發癢是正常現象，請勿用手摳抓或撕除皮屑，讓它自然脫落才能維持最均勻飽滿的呈色。</li>
-          <li>這段期間可持續薄塗潤澤霜保養。</li>
+          <li>大約第 3 到 5 天開始，操作部位會自然形成薄如蟬翼的細小微屑並漸漸代謝脫落。</li>
+          <li>微屑掉落時如果有點癢癢是正常的皮膚修復現象唷！請千萬不要用手指去摳抓或強行撕除皮屑，一定要讓它自然掉落，顏色才會最均勻美麗❤️</li>
+          <li>這段期間請持續溫柔洗臉、吸乾並薄擦潤澤產品，給肌膚滿滿水潤。</li>
         </ul>
         <div class="mann-divider"></div>
-        <h3 class="mann-sub-title">留色與維持週期</h3>
+        <h3 class="mann-sub-title">留色與維持期</h3>
         <ul class="mann-list">
-          <li>採用頂級安全色乳，依個人膚質、作息與代謝狀況不同，一般約可維持 1 至 3 年。</li>
-          <li>隨時間慢慢淡化屬於正常現象。待顏色變淡後，可依當時喜好的風格再預約補色微調唷。</li>
+          <li>我採用符合規範之安全進口植物色乳。依照個人膚質、代謝速度與生活作息的不同，通常可以維持約 1 至 3 年。</li>
+          <li>隨著皮膚自然代謝、顏色變淡都是很健康的正常現象。等顏色變淡後，再依照那時喜歡的新風格跟眉型，預約漫恩好友年度補色微調即可囉😊</li>
         </ul>
       </div>
     </div>
@@ -826,6 +863,7 @@
         const targetId = this.getAttribute('data-target');
         document.getElementById(targetId).classList.add('active');
         
+        // 增加滑動到視線中央與頁面最上方的流暢動畫
         this.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
